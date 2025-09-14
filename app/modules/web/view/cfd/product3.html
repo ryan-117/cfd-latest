@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AiAero - 整车风阻AI解决方案</title>
+    <meta name="viewport" content="width=1240">
+    <link rel="stylesheet" href="{{static_url}}/css/index.css" />
+    <link rel="stylesheet" href="{{static_url}}/css/product.css" />
+</head>
+<body id="product-detail">
+    {{include './common/header2.html'}}
+
+    <!-- banner -->
+    <section class="main-banner product3-banner">
+        <img class="banner-bg" src="{{static_url}}/img/product/3/09.png" alt="banner" />
+        <div class="banner-content">
+            <div class="banner-text">
+                <p class="banner-title">AiAero <span class="banner-subtitle">整车风阻AI解决方案</span></p>
+                <button class="banner-btn">立即体验</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="product-detail-section">
+        <!-- 技术特色 -->
+        <div class="product-block" style="width: 1512px;">
+            <h2>技术特色</h2>
+            <p class="block-desc">AiAero颠覆性的将传统CFD仿真需要4到5天的工作量缩短至1个小时内，同时模型预测精度误差控制在5%以内，完全满足工程实际应用中对计算精度和效率的双重需求。该方法不仅大幅提升了汽车外气动的研发效率，还为汽车造型设计等领域的快速迭代提供强有力的技术支撑。</p>
+            <img src="{{static_url}}/img/product/3/03.png" style="width: 1512px;" alt="技术特色对比" class="block-img" />
+        </div>
+
+        <!-- 技术方案 -->
+        <div class="product-block">
+            <h2>技术方案</h2>
+            <p class="block-desc">AiAero预测类型有三种，分别是特征参数预测Cd，预测2D切片流场和Cd，以及预测3D流场和Cd。</p>
+            <div class="sulution">
+                <img src="{{static_url}}/img/product/3/04.png" alt="技术方案" class="block-img" style="width: 520px;" />
+                <p class="block-desc">利用自研的长风软件自动提取整车模型的42个关键特征参数和该模型对应的风阻系数(Cd值)，创建样本集用于 AI训练。整车所有零件的命名需满足一定的技术规范，确保特征提取参数提取的准确性，如不满足规范需手动进 行修改。</p>
+            </div>
+        </div>
+
+        <!-- 训练流程 -->
+        <div class="product-block">
+            <h2>训练流程</h2>
+            <p class="block-desc">AiAero的训练流程包括制作训练集、模型训练、保存训练好的模型参数以及AI预测。其中训练集的制作占据大部 分的工作量，通过公司自研的工具软件，不但可以批量将STARCCM+求解后的sim文件转为可读取识别的case文 件，还可以自动提取结果数据，生成AI训练需要的样本集，全程无需人为干预。这一自动化流程不仅大幅缩短的 样本集制作周期，同时还保证了样本质量的一致性。</p>
+            <img src="{{static_url}}/img/product/3/13.png" alt="训练流程" class="block-img" />
+            <div class="train-visual-block" style="background-image:url('{{static_url}}/img/product/10.png');background-size:cover;background-position:center;">
+                <div class="train-visual-left">
+                    <div class="train-visual-title-row">
+                        <img class="train-visual-icon" src="{{static_url}}/img/product/11.png" alt="可视化训练图标" />
+                        <span class="train-visual-title">可视化训练过程</span>
+                    </div>
+                    <div class="train-visual-desc">
+                        基于网页端的自动训练，训练过程的残差曲线可以实时查看。支持定时开始训练，或者通过检测样本数量，当样本数量达到设定限值即可自动开启新一轮训练。
+                    </div>
+                </div>
+                <div class="train-visual-right">
+                    <img src="{{static_url}}/img/product/3/05.png" alt="可视化训练1" class="train-visual-img" />
+                    <img src="{{static_url}}/img/product/3/06.png" alt="可视化训练2" class="train-visual-img" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 训练成本 -->
+        <div class="product-block">
+            <h2>训练成本</h2>
+            <img src="{{static_url}}/img/product/3/01.png" alt="训练成本表格" class="block-img" style="width: 974px;" />
+        </div>
+
+        <!-- 水密操作 -->
+        <div class="product-block" style="width: 100%;">
+            <h2>水密操作</h2>
+            <p class="block-desc">在基于AI技术的整车风阻预测中，乘员舱密封性是至关重要的基础条件。针对平台化的整车开发方法，常遇见的密封性问题有下车体凸出于上车体、轮毂与轮眉不匹配、乘员舱不封闭、 上下车体不连接等。针对上述问题，借助于长风软件强大的几何修补处理功能，通过平移、补孔、投影等方法， 可快速实现整车水密，满足AI预测要求。</p>
+            <img style="width: 878px;" src="{{static_url}}/img/product/3/07.png" alt="水密操作" class="block-img" />
+            <img src="{{static_url}}/img/product/13.png" alt="" class="block-bg-img" />
+        </div>
+
+        <!-- 预测精度 -->
+        <div class="product-block">
+            <h2>预测精度</h2>
+            <div class="block-desc">误差小于5%的正确率达92%，满足工程开发实际应用。</div>
+            <div class="predict-accuracy-block">
+                <div class="predict-accuracy-row">
+                    <div class="predict-accuracy-left">
+                        <div class="predict-accuracy-title-row">
+                            <img class="predict-accuracy-icon" src="{{static_url}}/img/product/11.png" alt="预测精度图标" />
+                            <span class="predict-accuracy-title">指标达成情况</span>
+                        </div>
+                        <div class="predict-accuracy-metrics">
+                            <div class="metric-item">
+                                <div class="metric-value">1.64%</div>
+                                <div class="metric-label">平均误差</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">11.7%</div>
+                                <div class="metric-label">最大误差</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">2.39%</div>
+                                <div class="metric-label">误差方差</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">92%</div>
+                                <div class="metric-label">正确率</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="predict-accuracy-right">
+                        <img src="{{static_url}}/img/product/3/08.png" alt="预测精度图表" class="predict-accuracy-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 预测案例 -->
+        <div class="product-block">
+            <h2>预测案例</h2>
+            <p class="block-desc">在基于AI技术的整车风阻预测中，乘员舱密封性是至关重要的基础条件。针对平台化的整车开发方法，常遇见的密封性问题有下车体凸出于上车体、轮毂与轮眉不匹配、乘员舱不封闭、 上下车体不连接等。针对上述问题，借助于长风软件强大的几何修补处理功能，通过平移、补孔、投影等方法， 可快速实现整车水密，满足AI预测要求。</p>
+            <img src="{{static_url}}/img/product/3/02.png" alt="预测案例" class="block-img" style="width: 870px;" />
+        </div>
+    </div>
+
+    {{include './common/footer.html'}}
+</body>
+</html>

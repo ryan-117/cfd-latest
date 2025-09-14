@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RASE - 快速气动造型评估软件</title>
+    <meta name="viewport" content="width=1240">
+    <link rel="stylesheet" href="{{static_url}}/css/index.css" />
+    <link rel="stylesheet" href="{{static_url}}/css/product.css" />
+</head>
+<body id="product-detail">
+    {{include './common/header2.html'}}
+
+    <!-- banner -->
+    <section class="main-banner product2-banner">
+        <img class="banner-bg" src="{{static_url}}/img/product/2/10.png" alt="banner" />
+        <div class="banner-content">
+            <div class="banner-text">
+                <p class="banner-title">RASE <span class="banner-subtitle">快速气动造型评估软件</span></p>
+                <button class="banner-btn">立即体验</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="product-detail-section">
+        <!-- 技术特色 -->
+        <div class="product-block">
+            <h2>技术特色</h2>
+            <p class="block-desc">快速气动造型评估软件 RASE（Rapid Aerodynamic Styling Evaluation）是基于格子玻尔兹曼方法的流体仿真软件，依托GPU并行架构实现超高速求解，结合动网格技术，能够在保证精度的前提下，将传统CFD仿真速度提升数十倍。</p>
+            <div class="feature-flex-row">
+                <div class="feature-list-col">
+                    <ul class="rase-feature-list">
+                        <li><span class="dot"></span>一款面向汽车造型师的流体仿真软件</li>
+                        <li><span class="dot"></span>快速评估造型的气动性能</li>
+                        <li><span class="dot"></span>基于GPU并行计算</li>
+                        <li><span class="dot"></span>无需网格处理</li>
+                        <li><span class="dot"></span>强大的几何修补能力</li>
+                        <li><span class="dot"></span>一键式操作，人工干预少</li>
+                    </ul>
+                    <div class="rase-feature-btns">
+                        <button class="rase-btn">造型CAS导入</button>
+                        <button class="rase-btn">自动补全</button>
+                        <button class="rase-btn">一键求解</button>
+                        <button class="rase-btn">结果查看</button>
+                    </div>
+                </div>
+                <div class="feature-img-col">
+                    <img src="{{static_url}}/img/product/2/08.png" alt="技术特色右图" class="feature-img" style="width: 666px;" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 自动修补 -->
+        <div class="product-block">
+            <h2>自动修补</h2>
+            <p class="block-desc">导入CAS面后，只需简单选取轮眉并输入轮胎中心点坐标，RASE软件能够一键补全下车体。针对原始模型存在自由边、T形边等质量问题，RASE强大的包面算法可以进行自动包面，包完面后的模型可以直接计算。</p>
+            <img src="{{static_url}}/img/product/2/09.png" alt="自动修补" class="block-img" style="width: 877px;" />
+        </div>
+
+        <!-- 自带模型库 -->
+        <div class="product-block model-lib-block" style="width: 100%;">
+            <h2>自带模型库</h2>
+            <p class="block-desc">RASE软件自带轮胎和后视镜模型库，一键安装，让仿真更加逼真。</p>
+            <div class="model-lib-section" style="background-image:url('{{static_url}}/img/product/10.png');background-size:cover;background-position:right;width: 880px;">
+                <div class="model-lib-title-row">
+                    <img class="model-lib-icon" src="{{static_url}}/img/product/11.png" alt="轮胎图标" />
+                    <span class="model-lib-title">轮胎</span>
+                </div>
+                <img src="{{static_url}}/img/product/2/11.png" alt="自带模型库-轮毂" class="model-lib-img" />
+            </div>
+            <div class="model-lib-section" style="background-image:url('{{static_url}}/img/product/10.png');background-size:cover;background-position:right;width: 880px;">
+                <div class="model-lib-title-row">
+                    <img class="model-lib-icon" src="{{static_url}}/img/product/11.png" alt="后视镜图标" />
+                    <span class="model-lib-title">后视镜</span>
+                </div>
+                <img src="{{static_url}}/img/product/2/12.png" alt="自带模型库-后视镜" class="model-lib-img" />
+            </div>
+            <img src="{{static_url}}/img/product/13.png" alt="" class="block-bg-img" />
+        </div>
+
+        <!-- 训练成本 -->
+        <div class="product-block">
+            <h2>训练成本</h2>
+            <p class="block-desc">在Windows平台一键即可开始计算，风阻系数曲线会动态实时更新在视图窗口中，通常情况下10到20分钟左右就可以完成计算。</p>
+            <img src="{{static_url}}/img/product/2/01.png" alt="训练成本表格" class="block-img" style="width: 880px;" />
+        </div>
+
+        <!-- 结果查看 -->
+        <div class="product-block">
+            <h2>结果查看</h2>
+            <p class="block-desc">仿真计算完成后，RASE软件将自动在消息窗口中输出风阻系数（Cd值），并附带计算耗时统计。读入结果文件后还可查看相应的流线和动画。</p>
+            <img src="{{static_url}}/img/product/2/07.png" alt="结果流线图1" class="block-img" style="width: 750px;" />
+        </div>
+    </div>
+
+    {{include './common/footer.html'}}
+</body>
+</html>

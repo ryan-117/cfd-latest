@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"content="{{site.description}}">
+    <meta name="keywords" content="{{site.keywords}}"/>
+    <meta property="og:title" content="{{site.title}}" />
+    <meta property="og:description" content="{{site.description}}" />
+    <title>{{site.name}}</title>
+    {{include './common/meta.html'}}
+    {{include './common/js.html'}}
+    <link rel="stylesheet" href="{{static_url}}/css/index.css" />
+</head>
+
+<body id="index">
+    <!-- 头部 -->
+    {{include './common/header.html'}}
+    <!-- 顶部banner -->
+    <div class="top">
+        <img src="{{static_url}}/img/index/banner.png" alt="" class="banner">
+    </div>
+    <!-- 核心产品 -->
+    <div class="container product-container">
+        <div class="container-title">核心产品</div>
+        <div class="product">
+            <img src="{{static_url}}/img/index/p1.png" alt="">
+            <div class="product-content">
+                <div class="title">
+                    <span>长风</span>通用流体仿真分析软件
+                </div>
+                <ul class="desc">
+                    <li>基于LBM和大涡模拟的瞬态计算方法</li>
+                    <li>更快、更高效的前后处理能力</li>
+                    <li>全面支持企业定制和二次开发，实现功能自动化</li>
+                </ul>
+                <div class="operate">
+                    <a href="#" class="main">
+                        <span>立即体验</span>
+                        <img src="{{static_url}}/img/icon/download.svg" alt="">
+                    </a>
+                    <a href="/product1/page.html" class="sub">
+                        <span>了解详情</span>
+                        <img src="{{static_url}}/img/icon/arrow-right.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="{{static_url}}/img/index/p2.png" alt="">
+            <div class="product-content">
+                <div class="title">
+                    <span>RASE</span>快速汽车造型评估软件
+                </div>
+                <ul class="desc">
+                    <li>一款面向汽车造型师的专业流体仿真软件，快速评估造型的气动性能，基于GPU的高效计算，无需网格处理，强大的几何修补能力，一键式操作，人为干预少</li>
+                </ul>
+                <div class="operate">
+                    <a href="#" class="main">
+                        <span>立即体验</span>
+                        <img src="{{static_url}}/img/icon/download.svg" alt="">
+                    </a>
+                    <a href="/product2/page.html" class="sub">
+                        <span>了解详情</span>
+                        <img src="{{static_url}}/img/icon/arrow-right.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="{{static_url}}/img/index/p3.png" alt="">
+            <div class="product-content">
+                <div class="title">
+                    <span>AiAero</span>汽车智能风阻预测软件
+                </div>
+                <ul class="desc">
+                    <li>在丰富仿真数据的支持下，利用深度神经网络，训练代理模型，分析输入数据对整车风阻性能的影响，实现对风阻系数和流场的快速预测</li>
+                </ul>
+                <div class="operate">
+                    <a href="#" class="main">
+                        <span>立即体验</span>
+                        <img src="{{static_url}}/img/icon/download.svg" alt="">
+                    </a>
+                    <a href="/product3/page.html" class="sub">
+                        <span>了解详情</span>
+                        <img src="{{static_url}}/img/icon/arrow-right.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 企业动态 -->
+    <div class="container news-container" id="news-section">
+        <div class="container-title">企业动态</div>
+        <div class="news-content">
+            {{each news}}
+                <a class="news-item" href="{{$value.path}}/article-{{$value.id}}.html">
+                    <img src="{{$value.img}}" alt="">
+                    <div class="news-item-content">
+                        <p class="title">{{$value.title}}</p>
+                        <p class="desc">{{$value.description}}</p>
+                        <p class="date">{{dateFormat($value.createdAt, 'YYYY-MM-DD HH:mm:ss')}}</p>
+                    </div>
+                </a>
+            {{/each}}
+        </div>
+    </div>
+    <!-- 合作伙伴 -->
+    <div class="container partner-container">
+        <div class="container-title">合作伙伴</div>
+        <div class="partner-content">
+            <div class="partner-grid">
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="{{static_url}}/img/index/partner-logo/logo-1.png" alt="红旗">
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="{{static_url}}/img/index/partner-logo/logo-2.png" alt="一汽解放">
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="{{static_url}}/img/index/partner-logo/logo-3.png" alt="吉利汽车">
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="{{static_url}}/img/index/partner-logo/logo-4.png" alt="SRM 鑫源汽车">
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="{{static_url}}/img/index/partner-logo/logo-5.png" alt="岚图">
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="{{static_url}}/img/index/partner-logo/logo-6.png" alt="同济大学">
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="{{static_url}}/img/index/partner-logo/logo-7.png" alt="吉林大学">
+                    </div>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="{{static_url}}/img/index/partner-logo/logo-8.png" alt="江苏大学">
+                    </div>
+                </div>
+            </div>
+            <div class="join-us">
+                <img class="bg" src="{{static_url}}/img/index/join-bg.png" alt="">
+                <button class="join-btn">
+                    <img src="{{static_url}}/img/icon/paper-plane.svg" alt="">
+                    <span>加入我们</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    {{include './common/footer.html'}}
+</body>
+
+</html>

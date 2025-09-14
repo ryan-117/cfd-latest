@@ -1,0 +1,860 @@
+body#product-detail {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    min-width: 1240px;
+}
+
+/* 主banner区域 */
+.main-banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.banner-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content {
+    position: absolute;
+    width: 1240px;
+    top: 0;
+    left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.banner-text {
+    color: #333333;
+}
+
+.banner-text-white {
+    color: #fff;
+}
+
+.banner-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 78px 0 38px 0;
+}
+
+.banner-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 16px;
+}
+
+.banner-title-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.54);
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.banner-btn {
+    background: #1890ff;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.banner-btn:hover {
+    background: #40a9ff;
+}
+
+.banner-car {
+    flex-shrink: 0;
+}
+
+.banner-car img {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.product-detail-section {
+}
+
+.product-block {
+    width: 1240px;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    position: relative;
+}
+.product-block:last-child {
+    margin-bottom: 30px;
+}
+
+.product-block h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin:58px auto 42px;
+    color: #333;
+    text-align: center;
+}
+
+.block-desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-img {
+    position: relative;
+    display: block;
+    margin: 32px auto 0 auto;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    z-index: 1;
+}
+
+.block-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* 风阻特性仿真模块 */
+.drag-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.drag-btn {
+    padding: 12px 24px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.drag-btn:first-child {
+    border-radius: 6px 0 0 6px;
+}
+.drag-btn:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+.drag-btn.active {
+    background: #1890ff;
+    color: #fff;
+    border-color: #1890ff;
+}
+
+.drag-btn:hover {
+    background: #f5f5f5;
+}
+
+.drag-btn.active:hover {
+    background: #40a9ff;
+}
+
+.drag-content {
+    margin-top: 40px;
+}
+
+.car-models {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.car-models img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.chart-container {
+    margin-bottom: 32px;
+}
+
+.chart-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.chart-area {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-area img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 24px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-line {
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.legend-line.blue {
+    background: #1890ff;
+}
+
+.legend-line.green {
+    background: #52c41a;
+}
+
+.legend-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.chart-desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 计算效率模块 */
+.efficiency-table {
+    margin-top: 32px;
+}
+
+.table-footer {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 16px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+/* 模型检查模块 */
+.inspection-examples {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.example-item {
+    text-align: center;
+}
+
+.example-caption {
+    font-size: 14px;
+    color: #666;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* 几何清理模块 */
+.cleaning-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.example-pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.arrow {
+    font-size: 24px;
+    color: #1890ff;
+    font-weight: bold;
+}
+
+/* 包面模块 */
+.wrapping-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* 曲面偏置模块 */
+.offset-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* 网格生成模块 */
+.mesh-methods {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 40px 0;
+}
+
+.method-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.method-icon {
+    margin-bottom: 16px;
+}
+
+.method-icon img {
+    border-radius: 8px;
+    background: #f0f8ff;
+    padding: 8px;
+}
+
+.method-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.method-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.mesh-examples {
+    margin-top: 40px;
+}
+
+.mesh-main {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.mesh-details {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* 整车特征参数提取模块 */
+.parameter-examples {
+    margin-top: 40px;
+}
+
+.parameter-main {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.parameter-details {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* 作业提交工具模块 */
+.job-tool-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.job-description {
+    flex: 1;
+    max-width: 500px;
+}
+
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.job-icon img {
+    border-radius: 8px;
+    background: #f0f8ff;
+    padding: 4px;
+}
+
+.job-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.job-desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.job-scheduler {
+    flex-shrink: 0;
+}
+
+.job-scheduler img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.feature-item {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 432px;
+    height: 376px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 42px 36px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 20px;
+    height: 20px;
+    background: #1890ff;
+    flex-shrink: 0;
+    margin-right: 18px;
+}
+
+.feature-icon img {
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.feature-desc {
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    margin-bottom: 6px;
+}
+
+.img-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.img-row img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.product-table th, .product-table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.product-table th {
+    background: #f6f8fa;
+    font-weight: 600;
+}
+
+.job-submit-block {
+    padding: 32px 0 110px;
+}
+.job-submit-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 24px;
+}
+.job-submit-left {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+}
+.job-submit-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.job-submit-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f0f8ff;
+    padding: 4px;
+}
+.job-submit-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+.job-submit-desc {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+}
+.job-submit-right {
+    flex-shrink: 0;
+}
+.job-submit-img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px dashed #bcd2e6;
+    background: #f8fbff;
+}
+.feature-flex-row {
+    width: 1098px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 0 auto;
+}
+.feature-list-col {
+    flex: 1;
+    max-width: 340px;
+    text-align: left;
+}
+.rase-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+.rase-feature-list li {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+.rase-feature-list .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #1890ff;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+.rase-feature-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.rase-btn {
+    height: 24px;
+    line-height: 24px;
+    background: rgba(0,152,255,0.12);
+    color: #1890ff;
+    border: 1px solid #0098FF;
+    font-size: 10px;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.rase-btn:hover {
+    background: #1890ff;
+    color: #fff;
+}
+.feature-img-col {
+    flex-shrink: 0;
+}
+.feature-img {
+    width: 370px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    background: #fff;
+    border: 1px dashed #bcd2e6;
+}
+
+.train-visual-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 48px;
+    margin: 48px 0 0 0;
+}
+.train-visual-left {
+    flex: 1;
+    max-width: 340px;
+    text-align: left;
+    margin-top: 12px;
+}
+.train-visual-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 18px;
+}
+.train-visual-desc {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+}
+.train-visual-right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.train-visual-img {
+    width: 340px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    background: #fff;
+    border: 1px dashed #bcd2e6;
+}
+
+.train-visual-block {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+    margin: 48px auto 0 auto;
+    background: #f6faff;
+    border: 2px dashed #bcd2e6;
+    border-radius: 10px;
+    padding: 36px 40px;
+    max-width: 1240px;
+    width: 100%;
+}
+.train-visual-left {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+    margin-top: 0;
+}
+.train-visual-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+.train-visual-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1.5px dashed #bcd2e6;
+    padding: 4px;
+}
+.train-visual-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+.train-visual-desc {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+.train-visual-right {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.train-visual-img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    background: #fff;
+    border: 1px dashed #bcd2e6;
+}
+
+.predict-accuracy-block {
+    background: #f6faff;
+    border: 2px dashed #bcd2e6;
+    border-radius: 10px;
+    padding: 36px 40px 36px 40px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+}
+.predict-accuracy-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.predict-accuracy-left {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+}
+.predict-accuracy-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+.predict-accuracy-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1.5px dashed #bcd2e6;
+    padding: 4px;
+}
+.predict-accuracy-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+.predict-accuracy-desc {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+.predict-accuracy-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 32px;
+}
+.metric-item {
+    width: 136px;
+    height: 136px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.metric-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 4px;
+}
+.metric-label {
+    font-size: 15px;
+    color: #888;
+}
+.predict-accuracy-right {
+    flex-shrink: 0;
+}
+.predict-accuracy-img {
+    width: 754px;
+    height: 356px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    background: #fff;
+    border: 1px dashed #bcd2e6;
+}
+
+.model-lib-block {
+    padding-bottom: 32px;
+}
+.model-lib-section {
+    background: #f6faff;
+    border: 2px dashed #bcd2e6;
+    border-radius: 10px;
+    margin: 32px auto 0 auto;
+    padding: 32px 40px 24px 40px;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+.model-lib-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+.model-lib-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1.5px dashed #bcd2e6;
+    padding: 4px;
+}
+.model-lib-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+.model-lib-img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}

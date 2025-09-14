@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>长风道 - 招贤纳士</title>
+    <meta name="viewport" content="width=1240">
+    <link rel="stylesheet" href="{{static_url}}/css/index.css" />
+    <link rel="stylesheet" href="{{static_url}}/css/product.css" />
+</head>
+<body id="product-detail">
+    <!-- 头部 -->
+    {{include './common/header2.html'}}
+
+    <!-- 主banner区域 -->
+    <section class="main-banner">
+        <img class="banner-bg" src="{{static_url}}/img/joinus/banner.png" alt="汽车banner背景" />
+        <div class="banner-content">
+            <div class="banner-text-white">
+                <p class="banner-title">招贤纳士</p>
+                <p class="banner-title-sub">Recruit talents from all walks of life</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="joinus">
+        <div class="joinus-container">
+            <!-- 左侧城市选择 -->
+            <div class="location-sidebar">
+                <div class="location-item active" data-location="nanjing">
+                    <img src="{{static_url}}/img/joinus/location.png" alt="位置图标" class="location-icon" />
+                    <span class="location-text">南京</span>
+                </div>
+                <div class="location-item" data-location="beijing">
+                    <img src="{{static_url}}/img/joinus/location.png" alt="位置图标" class="location-icon" />
+                    <span class="location-text">北京</span>
+                </div>
+            </div>
+
+            <!-- 右侧职位列表 -->
+            <div class="jobs-content">
+                <div class="job-card">
+                    <div class="job-header">
+                        <img src="{{static_url}}/img/joinus/hc.png" alt="职位图标" class="job-icon" />
+                        <h3 class="job-title">软件开发工程师</h3>
+                    </div>
+                    <div class="job-section">
+                        <h4 class="section-title">岗位职责</h4>
+                        <div class="job-list">CFD software development, including user interface development, graphic display, file reading/writing, geometry repair, post-processing, etc.<br />Understand user requirements, optimize algorithms, and improve existing pre- and post-processing functions.
+                        </div>
+                    </div>
+                    <div class="job-section">
+                        <h4 class="section-title">任职条件</h4>
+                        <div class="job-list">CFD software development, including user interface development, graphic display, file reading/writing, geometry repair, post-processing, etc.<br />Understand user requirements, optimize algorithms, and improve existing pre- and post-processing functions.
+                        </div>
+                    </div>
+                </div>
+                <div class="job-card">
+                    <div class="job-header">
+                        <img src="{{static_url}}/img/joinus/hc.png" alt="职位图标" class="job-icon" />
+                        <h3 class="job-title">软件开发工程师</h3>
+                    </div>
+                    <div class="job-section">
+                        <h4 class="section-title">岗位职责</h4>
+                        <div class="job-list">CFD software development, including user interface development, graphic display, file reading/writing, geometry repair, post-processing, etc.<br />Understand user requirements, optimize algorithms, and improve existing pre- and post-processing functions.
+                        </div>
+                    </div>
+                    <div class="job-section">
+                        <h4 class="section-title">任职条件</h4>
+                        <div class="job-list">CFD software development, including user interface development, graphic display, file reading/writing, geometry repair, post-processing, etc.<br />Understand user requirements, optimize algorithms, and improve existing pre- and post-processing functions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .joinus {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .joinus-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+        }
+
+        /* 左侧城市选择 */
+        .location-sidebar {
+            width: 212px;
+            flex-shrink: 0;
+        }
+
+        .location-item {
+            height: 56px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border-right: 4px solid #D4D4D4;
+            color: #999;
+            justify-content: flex-end;
+        }
+
+        .location-item.active {
+            color: #4A90E2;
+            background: linear-gradient( 270deg, #EEF4FF 0%, #FFFFFF 100%);
+            border-color: #0098FF;
+        }
+
+        .location-item.active .location-icon {
+            display: block;
+        }
+
+        .location-item:hover {
+            background: linear-gradient( 270deg, #EEF4FF 0%, #FFFFFF 100%);
+        }
+
+        .location-item:hover .location-icon {
+            display: block;
+        }
+
+        .location-icon {
+            width: 16px;
+            height: 20px;
+            margin-right: 16px;
+            display: none;
+        }
+
+        .location-text {
+            font-size: 18px;
+            color: #40506B;
+            margin-right: 28px;
+        }
+
+        /* 右侧职位内容 */
+        .jobs-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .job-card {
+            background: #F8FAFF;
+            box-shadow: 0px 7px 10px 0px rgba(188,211,253,0.42);
+            border-radius: 8px;
+            padding: 42px;
+        }
+
+        .job-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .job-icon {
+            width: 48px;
+            height: 48px;
+            margin-right: 32px;
+        }
+
+        .job-title {
+            font-weight: 600;
+            font-size: 32px;
+            color: #000000;
+            line-height: 45px;
+            letter-spacing: 1px;
+        }
+
+        .job-section {
+            padding-left: 80px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin: 8px 0;
+        }
+
+        .job-list {
+            font-size: 16px;
+            color: #40506B;
+            line-height: 32px;
+        }
+
+
+        .job-contact {
+            border-top: 1px solid #E5E5E5;
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .joinus-container {
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 15px;
+            }
+
+            .location-sidebar {
+                width: 100%;
+            }
+
+            .location-item {
+                display: inline-flex;
+                margin-right: 20px;
+            }
+
+            .job-card {
+                padding: 20px;
+            }
+
+            .job-title {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const locationItems = document.querySelectorAll('.location-item');
+            const jobGroups = document.querySelectorAll('.job-group');
+
+            locationItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const location = this.getAttribute('data-location');
+
+                    // 移除所有active状态
+                    locationItems.forEach(loc => loc.classList.remove('active'));
+
+                    // 添加当前选中状态
+                    this.classList.add('active');
+
+                    // 隐藏所有职位组
+                    jobGroups.forEach(group => {
+                        group.style.display = 'none';
+                    });
+
+                    // 显示对应城市的职位
+                    const targetGroup = document.querySelector(`.job-group[data-location="${location}"]`);
+                    if (targetGroup) {
+                        targetGroup.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- 底部 -->
+    {{include './common/footer.html'}}
+</body>
+</html>
