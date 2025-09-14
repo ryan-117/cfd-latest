@@ -1,8 +1,8 @@
 {
-  "name": "chancms",
+  "name": "cfd-portal",
   "type": "module",
   "version": "3.3.1",
-  "description": "ChanCMS是一款基于Node、Express5、MySQL、Vue3研发的高质量实用型CMS系统。",
+  "description": "一款基于Node、Express5、MySQL、Vue3研发的高质量实用型CMS系统。",
   "main": "app.js",
   "scripts": {
     "dev": "node --env-file=.env.dev --watch app.js",

@@ -1,7 +1,7 @@
 ﻿{
     "apps": [
         {
-            "name": "ChanCMS",
+            "name": "CFD-Portal",
             "script": "app.js",
             "watch": false,
             "ignore_watch": [
