@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>长风道 - 招贤纳士</title>
+    <meta name="viewport" content="width=1240">
+    <link rel="stylesheet" href="{{static_url}}/css/index.css" />
+    <link rel="stylesheet" href="{{static_url}}/css/product.css" />
+</head>
+<body id="product-detail">
+    <!-- 头部 -->
+    {{include './common/header2.html'}}
+
+    <!-- 主banner区域 -->
+    <section class="main-banner">
+        <img class="banner-bg" src="{{static_url}}/img/joinus/banner.png" alt="汽车banner背景" />
+        <div class="banner-content">
+            <div class="banner-text-white">
+                <p class="banner-title">招贤纳士</p>
+                <p class="banner-title-sub">Recruit talents from all walks of life</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="joinus">
+        <div class="joinus-container">
+            <!-- 左侧城市选择 -->
+            <div class="location-sidebar">
+                <div class="location-item active" data-location="nj">
+                    <img src="{{static_url}}/img/joinus/location.png" alt="位置图标" class="location-icon" />
+                    <span class="location-text">南京</span>
+                </div>
+                <div class="location-item" data-location="bj">
+                    <img src="{{static_url}}/img/joinus/location.png" alt="位置图标" class="location-icon" />
+                    <span class="location-text">北京</span>
+                </div>
+            </div>
+
+            <!-- 右侧职位列表 -->
+            <div class="jobs-content">
+                <!-- 南京岗位组 -->
+                <div class="job-group" data-location="nj" style="display: block;">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <img src="{{static_url}}/img/joinus/hc.png" alt="职位图标" class="job-icon" />
+                            <h3 class="job-title">软件开发工程师</h3>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">岗位职责</h4>
+                            <div class="job-list">
+                                <p>1.CFD软件开发，包括用户界面开发、图形显示、文件读写、几何修补、后处理等</p>
+                                <p>2.理解用户提出的需求，优化算法，改进已有的前后处理功能 </p>
+                            </div>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">任职条件</h4>
+                            <div class="job-list">
+                                <p>1.硕士以上学历，流体、声学、数学、机械工程等专业</p>
+                                <p>2.熟练掌握C++，掌握Python，Qt等开发语言，具有良好的编码习惯</p>
+                                <p>3.了解市场常用CAE软件（ANSA、Hypermesh、StarCCM+等），了解流体仿真的基本过程</p>
+                                <p>4.有噪声信号处理相关经验者优先</p>
+                                <p>5.愿意学习，善于沟通，善于创新，有志为开发国产工业软件贡献力量</p>
+                            </div>
+                            <a class="job-contact" href="mailto:career@changfengdao.com">简历投递：career@changfengdao.com</a>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <div class="job-header">
+                            <img src="{{static_url}}/img/joinus/hc.png" alt="职位图标" class="job-icon" />
+                            <h3 class="job-title">软件测试工程师</h3>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">岗位职责</h4>
+                            <div class="job-list">
+                                <p>1.对流体软件求解器及前后处理功能测试，制定测试计划，制作测试用例等</p>
+                                <p>2.对测试过程中发现的bug进行管理和追踪，提交测试报告</p>
+                                <p>3.对软件产品相关文档和手册进行编写</p>
+                                <p>4.对软件开发提供建设性意见</p>
+                            </div>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">任职条件</h4>
+                            <div class="job-list">
+                                <p>1.硕士以上学历，流体力学、力学、机械、声学等相关专业</p>
+                                <p>2.熟练使用Star-CCM+、Fluent、ANSA、Hypermesh等仿真软件</p>
+                                <p>3.熟悉整车外流场、风阻、风噪和热管理分析过程</p>
+                                <p>4.具备良好的沟通、协调、团队合作能力，有一定文档撰写能力</p>
+                                <p>5.具有一定的Linux环境使用基础</p>
+                                <p>6.具有主机厂工作经验者优先</p>
+                            </div>
+                            <a class="job-contact" href="mailto:career@changfengdao.com">简历投递：career@changfengdao.com</a>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <div class="job-header">
+                            <img src="{{static_url}}/img/joinus/hc.png" alt="职位图标" class="job-icon" />
+                            <h3 class="job-title">求解器开发工程师</h3>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">岗位职责</h4>
+                            <div class="job-list">
+                                <p>1.根据软件开发需求，开发出相适应场景的求解器</p>
+                                <p>2.优化求解器算法，不断提升求解器的精度和效率</p>
+                                <p>3.结合不同行业应用特点，优化相应算法及参数</p>
+                            </div>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">任职条件</h4>
+                            <div class="job-list">
+                                <p>1.硕士以上学历，流体力学、气动噪声等相关专业，博士优先</p>
+                                <p>2.专业功底扎实，熟悉计算流体力学相关算法，具有求解器开发相关经验</p>
+                                <p>3.掌握C++，熟练使用linux系统，熟悉CPU,GUP等并行算法</p>
+                                <p>4.熟悉常用CFD软件，FLUENT、OpenFOAM、StarCCM+等</p>
+                                <p>5.工作思路清晰，具备良好的学习，沟通、协调、团队合作能力</p>
+                            </div>
+                            <a class="job-contact" href="mailto:career@changfengdao.com">简历投递：career@changfengdao.com</a>
+                        </div>
+                    </div>
+                    <!-- 可继续添加南京岗位 -->
+                </div>
+                <!-- 北京岗位组 -->
+                <div class="job-group" data-location="bj" style="display: none;">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <img src="{{static_url}}/img/joinus/hc.png" alt="职位图标" class="job-icon" />
+                            <h3 class="job-title">驻场工程师</h3>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">岗位职责</h4>
+                            <div class="job-list">
+                                <p>1.负责整车风阻分析及优化</p>
+                                <p>2.负责机舱热管理分析及优化、冷却系统匹配仿真等</p>
+                                <p>3.负责除霜除雾、吹脚吹面、热舒适性等仿真</p>
+                                <p>4.负责动力电池包、电机电控热管理相关分析</p>
+                                <p>5.负责性能试验的跟踪，及试验结果与仿真结果的对标分析等</p>
+                                <p>6.负责编制分析报告和专题汇报材料</p>
+                            </div>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">任职条件</h4>
+                            <div class="job-list">
+                                <p>1.全日制大专及以上学历</p>
+                                <p>2.熟悉车辆结构，具有基本的理论知识，能够对分析结果进行解读，并提出有效优化方案</p>
+                                <p>3.熟练使用CFD分析软件（如Star-ccm+），熟练使用前处理软件（如hypermesh、Ansa等），掌握CAD工具（Catia等）基本操作</p>
+                                <p>4.能适应长期出差，具备较好的分析能力、优化能力、沟通表达能力、团队协作精神，能承担一定工作压力</p>
+                            </div>
+                            <a class="job-contact" href="mailto:career@changfengdao.com">简历投递：career@changfengdao.com</a>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <div class="job-header">
+                            <img src="{{static_url}}/img/joinus/hc.png" alt="职位图标" class="job-icon" />
+                            <h3 class="job-title">售前售后技术支持工程师</h3>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">岗位职责</h4>
+                            <div class="job-list">
+                                <p>1.负责产品销售材料编写、包装</p>
+                                <p>2.负责客户需求沟通、技术方案编写及各种相关售前和市场活动支持；</p>
+                                <p>3.销售售前支持、客户需求洽谈、现场勘查定点等；</p>
+                                <p>4.支持完成项目的实施与交付，包括需求调研、安装部署、产品培训以及问题解决等；</p>
+                            </div>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">任职条件</h4>
+                            <div class="job-list">
+                                <p>1.硕士以上学历，流体力学、力学、机械、声学等相关专业</p>
+                                <p>2.具备整车气动、噪声、热管理仿真经验</p>
+                                <p>3.具有一定的商业敏感度，良好的口头、书面沟通与表达能力，善于迅速把握客户、市场、技术等各环节工作中的要点</p>
+                                <p>4.能适应长期出差，能承担一定工作压力</p>
+                            </div>
+                            <a class="job-contact" href="mailto:career@changfengdao.com">简历投递：career@changfengdao.com</a>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <div class="job-header">
+                            <img src="{{static_url}}/img/joinus/hc.png" alt="职位图标" class="job-icon" />
+                            <h3 class="job-title">销售经理</h3>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">岗位职责</h4>
+                            <div class="job-list">
+                                <p>1.负责产品销售及推广</p>
+                            </div>
+                        </div>
+                        <div class="job-section">
+                            <h4 class="section-title">任职条件</h4>
+                            <div class="job-list">
+                                <p>1.本科以及以上学历，有过 CAE 软件销售经验，有在相关软件公司工作背景优先；</p>
+                                <p>2.具备良好的沟通能力和市场开拓能力，精力旺盛，做事认真努力，具备一定的演讲能力；</p>
+                                <p>3.有良好的自我管理能力和团队合作精神，热爱销售工作，能承受较大的工作压力，并能够适应长期出差工作。</p>
+                            </div>
+                            <a class="job-contact" href="mailto:career@changfengdao.com">简历投递：career@changfengdao.com</a>
+                        </div>
+                    </div>
+                    <!-- 可继续添加北京岗位 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .joinus {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .joinus-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+        }
+
+        /* 左侧城市选择 */
+        .location-sidebar {
+            width: 212px;
+            flex-shrink: 0;
+        }
+
+        .location-item {
+            height: 56px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border-right: 4px solid #D4D4D4;
+            color: #999;
+            justify-content: flex-end;
+        }
+
+        .location-item.active {
+            color: #4A90E2;
+            background: linear-gradient( 270deg, #EEF4FF 0%, #FFFFFF 100%);
+            border-color: #0098FF;
+        }
+
+        .location-item.active .location-icon {
+            display: block;
+        }
+
+        .location-item:hover {
+            background: linear-gradient( 270deg, #EEF4FF 0%, #FFFFFF 100%);
+        }
+
+        .location-item:hover .location-icon {
+            display: block;
+        }
+
+        .location-icon {
+            width: 16px;
+            height: 20px;
+            margin-right: 16px;
+            display: none;
+        }
+
+        .location-text {
+            font-size: 18px;
+            color: #40506B;
+            margin-right: 28px;
+        }
+
+        /* 右侧职位内容 */
+        .jobs-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            overflow-y: auto;
+        }
+
+        .job-card {
+            background: #F8FAFF;
+            box-shadow: 0px 7px 10px 0px rgba(188,211,253,0.42);
+            border-radius: 8px;
+            padding: 42px;
+            margin-bottom: 16px;
+        }
+
+        .job-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .job-icon {
+            width: 48px;
+            height: 48px;
+            margin-right: 32px;
+        }
+
+        .job-title {
+            font-weight: 600;
+            font-size: 32px;
+            color: #000000;
+            line-height: 45px;
+            letter-spacing: 1px;
+        }
+
+        .job-section {
+            padding-left: 80px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin: 8px 0;
+        }
+
+        .job-list {
+            font-size: 16px;
+            color: #40506B;
+            line-height: 32px;
+        }
+
+        .job-list p {
+            margin: 0;
+        }
+
+        .job-contact {
+            height: 40px;
+            line-height: 40px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .joinus-container {
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 15px;
+            }
+
+            .location-sidebar {
+                width: 100%;
+            }
+
+            .location-item {
+                display: inline-flex;
+                margin-right: 20px;
+            }
+
+            .job-card {
+                padding: 20px;
+            }
+
+            .job-title {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const locationItems = document.querySelectorAll('.location-item');
+            const jobGroups = document.querySelectorAll('.job-group');
+
+            locationItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const location = this.getAttribute('data-location');
+
+                    // 移除所有active状态
+                    locationItems.forEach(loc => loc.classList.remove('active'));
+
+                    // 添加当前选中状态
+                    this.classList.add('active');
+
+                    // 隐藏所有职位组
+                    jobGroups.forEach(group => {
+                        group.style.display = 'none';
+                    });
+
+                    // 显示对应城市的职位
+                    const targetGroup = document.querySelector(`.job-group[data-location="${location}"]`);
+                    if (targetGroup) {
+                        targetGroup.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- 底部 -->
+    {{include './common/footer.html'}}
+</body>
+</html>
