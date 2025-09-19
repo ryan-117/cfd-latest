@@ -2,163 +2,39 @@
   <!-- logo -->
   <img class="logo" src="{{static_url}}/img/logo-1.png" alt="" />
   <!-- 菜单 -->
-  <nav>
-    <div class="nav-item"><a class="nav-link" href="/">首页</a></div>
-    <div class="nav-item dropdown">
-      <a class="nav-link" href="#">核心产品</a>
-      <div class="dropdown-menu">
-        <a href="/product1/page.html" class="dropdown-item">长风 通用流体仿真分析软件</a>
-        <a href="/product2/page.html" class="dropdown-item">RASE 快速汽车造型评估软件</a>
-        <a href="/product3/page.html" class="dropdown-item">AiAero 汽车智能风阻预测软件</a>
-      </div>
-    </div>
-    <div class="nav-item"><a class="nav-link" href="/solution/page.html">解决方案</a></div>
-    <div class="nav-item"><a class="nav-link" href="/index.html#news-section" id="nav-news-link">企业动态</a></div>
-    <div class="nav-item"><a class="nav-link" href="/about/page.html">关于我们</a></div>
-    <div class="nav-item"><a class="nav-link" href="/joinus/page.html">招贤纳士</a></div>
-  </nav>
+  {{include './nav.html'}}
   <!-- 登录、语言等 -->
   <div></div>
 </header>
-  <style>
-    #header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin: 0 auto;
-      min-width: 600px;
-      padding-top: 16px;
-    }
-    #header .logo {
-      margin: 0 44px;
-      width: 150px;
-      height: 48px;
-    }
-    nav {
-      display: flex;
-    }
-    nav .nav-item {
-      height: 50px;
-      line-height: 50px;
-      position: relative;
-    }
-    nav .nav-item .nav-link {
-      display: block;
-      height: 50px;
-      line-height: 50px;
-      margin: 0 25px;
-      font-size: 14px;
-      color: #333;
-      position: relative;
-      text-decoration: none;
-    }
-    nav .nav-item:hover .nav-link {
-      color: #0098FF;
-      border-bottom: 2px solid #0098FF;
-      border-radius: 2px;
-    }
+<style>
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 600px;
+    padding-top: 16px;
+  }
+  #header .logo {
+    margin: 0 44px;
+    width: 150px;
+    height: 48px;
+  }
+  nav .nav-item .nav-link {
+    color: #333;
+  }
 
-    /* 下拉菜单样式 */
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: -50%;
-      background: rgba(255, 255, 255, 0.8000);
-      border: 1px solid #e5e5e5;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      min-width: 240px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: all 0.3s ease;
-      z-index: 1000;
-    }
-
-    .dropdown:hover .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .dropdown-item {
-      display: block;
-      padding: 12px 16px;
-      color: #333;
-      text-decoration: none;
-      font-size: 14px;
-      border-bottom: 1px solid #f5f5f5;
-      transition: background-color 0.2s ease;
-      margin: 0 !important;
-      height: auto !important;
-      line-height: 1.4 !important;
-    }
-
-    .dropdown-item:last-child {
-      border-bottom: none;
-    }
-
-    .dropdown-item:hover {
-      background-color: #f8f9fa;
-      color: #0098FF;
-      border-bottom: none !important;
-    }
-
-    /* 下拉箭头 */
-    .dropdown > a::after {
-      content: '▼';
-      margin-left: 4px;
-      font-size: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .dropdown:hover > a::after {
-      transform: rotate(180deg);
-    }
-  </style>
-
-  <script>
-    // 原生JavaScript实现下拉菜单交互
-    document.addEventListener('DOMContentLoaded', function() {
-      const dropdown = document.querySelector('.dropdown');
-      const dropdownMenu = document.querySelector('.dropdown-menu');
-
-      // 鼠标进入显示下拉菜单
-      dropdown.addEventListener('mouseenter', function() {
-        dropdownMenu.style.opacity = '1';
-        dropdownMenu.style.visibility = 'visible';
-        dropdownMenu.style.transform = 'translateY(0)';
-      });
-
-      // 鼠标离开隐藏下拉菜单
-      dropdown.addEventListener('mouseleave', function() {
-        dropdownMenu.style.opacity = '0';
-        dropdownMenu.style.visibility = 'hidden';
-        dropdownMenu.style.transform = 'translateY(-10px)';
-      });
-
-      // 点击下拉菜单项的处理
-      const dropdownItems = document.querySelectorAll('.dropdown-item');
-      dropdownItems.forEach(function(item) {
-        item.addEventListener('click', function(e) {
-          // 可以在这里添加点击处理逻辑
-          console.log('点击了:', this.textContent);
-        });
-      });
-
-      // 跨页锚点平滑滚动
-      if (window.location.pathname.endsWith('/index.html') && window.location.hash === '#news-section') {
-        setTimeout(function() {
-          var el = document.getElementById('news-section');
-          if (el) {
-            el.scrollIntoView({behavior: 'smooth'});
-          }
-        }, 300);
-      }
-    });
-  </script>
+  /* 下拉菜单样式 */
+  .dropdown-menu {
+    background: rgba(255, 255, 255, 0.8000);
+    border: 1px solid #e5e5e5;
+  }
+  .dropdown-item {
+    color: #333;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+</style>

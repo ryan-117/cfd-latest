@@ -93,7 +93,7 @@
     <div class="container news-container" id="news-section">
         <div class="container-title">企业动态</div>
         <div class="news-content">
-            {{each news}}
+            {{each hot}}
                 <a class="news-item" href="{{$value.path}}/article-{{$value.id}}.html">
                     <img src="{{$value.img}}" alt="">
                     <div class="news-item-content">
@@ -155,7 +155,8 @@
                 <img class="bg" src="{{static_url}}/img/index/join-bg.png" alt="">
                 <button class="join-btn">
                     <img src="{{static_url}}/img/icon/paper-plane.svg" alt="">
-                    <span>加入我们</span>
+                    <!-- <span>加入我们</span> -->
+                    <a href="/joinus/page.html">加入我们</a>
                 </button>
             </div>
         </div>

@@ -47,7 +47,7 @@ CREATE TABLE `cms_article`  (
 -- ----------------------------
 -- Records of cms_article
 -- ----------------------------
-INSERT INTO `cms_article` VALUES (3, 4, '', '后台基本操作', '', '2', '', '', '', '', '后台基本操作', '', '<p><iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=877077167&bvid=BV17N4y1Y7WC&cid=1362009352&p=1\" height=\"520\" frameborder=\"no\" scrolling=\"no\" allowfullscreen=\"allowfullscreen\"></iframe></p>', 0, 8, '', '2024-09-13 22:59:58', '2025-02-13 22:38:52');
+INSERT INTO `cms_article` VALUES (3, 4, '', '后台基本操作', '', '2', '', '', '', '', '后台基本操作', '', '<p><iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=877077167&bvid=BV17N4y1Y7WC&cid=1362009352&p=1\" height=\"520\" frameborder=\"no\" scrolling=\"no\" allowfullscreen=\"allowfullscreen\"></iframe></p>', 0, 8, '', '2025-09-13 22:59:58', '2025-02-13 22:38:52');
 INSERT INTO `cms_article` VALUES (22, 8, '', '欢迎使用系统', '', '2', '', '', '', '', '1', '/public/uploads/default/2025/04/02/1743577048415_source_01.jpg', '欢迎使用系统', 0, 2, '', '2025-04-02 14:28:02', '2025-08-12 17:51:17');
 
 -- ----------------------------
@@ -100,14 +100,14 @@ CREATE TABLE `cms_category`  (
 -- Records of cms_category
 -- ----------------------------
 INSERT INTO `cms_category` VALUES
-	 (0,'','','','首页','home','/home','','1','',1,'0','0','0','index.html','index.html','2024-09-13 22:38:12','2025-07-25 19:41:13'),
-	 (0,'','','','新闻列表','news','/news','','0','',0,'0','0','0','list.html','list.html','2024-09-13 22:38:12','2025-07-26 15:10:35'),
-	 (2,'','','','新闻详情','news','/news-list/news','','1','',0,'0','0','0','list.html','index-news.html','2024-12-05 22:35:58','2025-07-26 15:50:16'),
-	 (0,'','','','核心产品2','product2','/product2','','1','',0,'0','0','0','product2.html','product2.html','2025-07-20 17:40:15','2025-07-26 15:08:23'),
-	 (0,'','','','核心产品3','product3','/product3','','1','',0,'0','0','0','product3.html','product3.html','2025-07-21 22:30:29','2025-07-26 15:08:15'),
-	 (0,'','','','核心产品1','product1','/product1','','1','',0,'0','0','0','product1.html','product1.html','2025-07-21 22:31:45','2025-07-26 15:07:58'),
-	 (0,'','','','解决方案','solution','/solution','','1','',0,'0','0','0','index.html','solution.html','2025-09-13 20:57:21','2025-09-13 20:59:58'),
-	 (0,'','','','招贤纳士','joinus','/joinus','','1','',0,'0','0','0','join-us.html','join-us.html','2025-09-13 21:13:09','2025-09-13 21:13:09');
+	 (1, 0,'','','','首页','home','/home','','1','',1,'0','0','0','index.html','index.html','2025-09-13 22:38:12','2025-07-25 19:41:13'),
+	 (2, 0,'','','','新闻列表','news','/news','','0','',0,'0','0','0','list.html','list.html','2025-09-13 22:38:12','2025-07-26 15:10:35'),
+	 (3, 2,'','','','新闻详情','news','/news-list/news','','1','',0,'0','0','0','list.html','index-news.html','2025-12-05 22:35:58','2025-07-26 15:50:16'),
+	 (4, 0,'','','','核心产品2','product2','/product2','','1','',0,'0','0','0','product2.html','product2.html','2025-07-20 17:40:15','2025-07-26 15:08:23'),
+	 (5, 0,'','','','核心产品3','product3','/product3','','1','',0,'0','0','0','product3.html','product3.html','2025-07-21 22:30:29','2025-07-26 15:08:15'),
+	 (6, 0,'','','','核心产品1','product1','/product1','','1','',0,'0','0','0','product1.html','product1.html','2025-07-21 22:31:45','2025-07-26 15:07:58'),
+	 (7, 0,'','','','解决方案','solution','/solution','','1','',0,'0','0','0','index.html','solution.html','2025-09-13 20:57:21','2025-09-13 20:59:58'),
+	 (8, 0,'','','','招贤纳士','joinus','/joinus','','1','',0,'0','0','0','join-us.html','join-us.html','2025-09-13 21:13:09','2025-09-13 21:13:09');
 
 -- ----------------------------
 -- Table structure for cms_field
@@ -153,8 +153,8 @@ CREATE TABLE `cms_frag`  (
 -- ----------------------------
 -- Records of cms_frag
 -- ----------------------------
-INSERT INTO `cms_frag` VALUES (1, '简介', 'CFD', '<p><span style=\"font-size: 14px;\">一款基于Node、Express、MySQL、Vue3研发的高质量实用型CMS系统。轻量、灵活、稳定、高性能、易扩展，让开发更简单。</span></p>', '1', '2024-09-13 22:53:33', '2024-09-27 10:51:41');
-INSERT INTO `cms_frag` VALUES (2, 'PowerBy', 'PowerBy', '<p style=\"text-align: center;\">Powder By <a href=\"http://www.xxx.top\" target=\"_blank\" rel=\"noopener\"> v3.0.14</a></p>', '1', '2024-09-27 11:00:03', '2025-02-12 22:13:21');
+INSERT INTO `cms_frag` VALUES (1, '简介', 'CFD', '<p><span style=\"font-size: 14px;\">一款基于Node、Express、MySQL、Vue3研发的高质量实用型CMS系统。轻量、灵活、稳定、高性能、易扩展，让开发更简单。</span></p>', '1', '2025-09-13 22:53:33', '2025-09-27 10:51:41');
+INSERT INTO `cms_frag` VALUES (2, 'PowerBy', 'PowerBy', '<p style=\"text-align: center;\">Powder By <a href=\"http://www.xxx.top\" target=\"_blank\" rel=\"noopener\"> v3.0.14</a></p>', '1', '2025-09-27 11:00:03', '2025-02-12 22:13:21');
 
 -- ----------------------------
 -- Table structure for cms_friendlink
@@ -173,7 +173,7 @@ CREATE TABLE `cms_friendlink`  (
 -- ----------------------------
 -- Records of cms_friendlink
 -- ----------------------------
-INSERT INTO `cms_friendlink` VALUES (1, '官网', 'https://www.xxx.top', 0, '2024-10-02 14:12:45', '2024-10-02 14:12:45');
+INSERT INTO `cms_friendlink` VALUES (1, '官网', 'https://www.xxx.top', 0, '2025-10-02 14:12:45', '2025-10-02 14:12:45');
 
 -- ----------------------------
 -- Table structure for cms_message
@@ -243,7 +243,7 @@ CREATE TABLE `cms_site`  (
 -- ----------------------------
 -- Records of cms_site
 -- ----------------------------
-INSERT INTO `cms_site` VALUES (1, 'CFD', '/public/template/default/img/logo.png', 'www.xxx.top2', 'xxx@qq.com1', NULL, '皖ICP备2024031001号-11', '', '', '演示站', '演示站', '是一款基于Express和MySQL研发的高质量实用型CMS管理系统。它具备多种类型网站开发，易扩展、基于模块化和插件化开发模式，适用于商用企业级程序开发。', 'default', '1', NULL, '2025-08-13 10:27:21');
+INSERT INTO `cms_site` VALUES (1, 'CFD', '/public/template/default/img/logo.png', 'www.xxx.top2', 'xxx@qq.com1', NULL, '皖ICP备2025031001号-11', '', '', '演示站', '演示站', '是一款基于Express和MySQL研发的高质量实用型CMS管理系统。它具备多种类型网站开发，易扩展、基于模块化和插件化开发模式，适用于商用企业级程序开发。', 'default', '1', NULL, '2025-08-13 10:27:21');
 
 -- ----------------------------
 -- Table structure for cms_slide
@@ -264,7 +264,7 @@ CREATE TABLE `cms_slide`  (
 -- ----------------------------
 -- Records of cms_slide
 -- ----------------------------
-INSERT INTO `cms_slide` VALUES (1, '01', '/public/template/huida/imgs/01.jpg', '', '<h2 class=\"text-4xl font-bold mb-4\">环保科技引领未来</h2>\n<p class=\"text-xl mb-6\">专业的环保解决方案提供商</p>\n<p><a href=\"about.html\" class=\"bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition duration-300\">联系我们</a></p>', NULL, '2024-09-17 10:52:05', '2025-07-06 09:30:15');
+INSERT INTO `cms_slide` VALUES (1, '01', '/public/template/huida/imgs/01.jpg', '', '<h2 class=\"text-4xl font-bold mb-4\">环保科技引领未来</h2>\n<p class=\"text-xl mb-6\">专业的环保解决方案提供商</p>\n<p><a href=\"about.html\" class=\"bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition duration-300\">联系我们</a></p>', NULL, '2025-09-17 10:52:05', '2025-07-06 09:30:15');
 INSERT INTO `cms_slide` VALUES (2, '02', '/public/template/huida/imgs/02.jpg', '', NULL, NULL, '2025-07-05 20:49:22', '2025-07-05 20:49:39');
 INSERT INTO `cms_slide` VALUES (3, '04', '/public/template/huida/imgs/04.jpg', '', NULL, NULL, '2025-07-05 20:51:11', '2025-07-06 09:26:00');
 
@@ -333,7 +333,7 @@ CREATE TABLE `plus_collect`  (
 -- ----------------------------
 -- Records of plus_collect
 -- ----------------------------
-INSERT INTO `plus_collect` VALUES (2, '人民网-top文章', 'http://www.people.com.cn/', '#rm_topline a', 1, 1, '1', '#newstit', '.rm_txt_con', '1', 'http://js.people.com.cn/n2/2024/0822/c360301-40951625.html', '//图片加域名\nvar urlPrefix = \"http://www.people.com.cn/\";\n    data = data.replace(/(<img[^>]*src=[\"\'])([^\"\']*)(\".*>)/g, function(match, p1, p2, p3) {\n        return p1 + urlPrefix + p2 + p3;\n    });\n//删除分享\ndata = data .replace(/<p\\s+class=\"paper_num\"[^>]*>[\\s\\S]*<\\/p>/gi, \'\');\n//删除编辑\ndata = data .replace(/<div\\s+class=\"(?:edit\\s+)[^\"]*\"[^>]*>[\\s\\S]*<\\/div>/gi, \'\');\n// 移除 style 属性中的所有样式，但保留 text-align: center;\ndata = data .replace(/ style\\s*=\\s*[\'\"]([^\'\"]*)[\'\"]/g, function(match, style) {\n    // 检查是否已包含 text-align: center;\n    if (style.includes(\'text-align: center;\')) {\n        // 如果存在 text-align: center; 则只保留它\n        return ` style=\"text-align: center;\"`;\n    } else {\n        // 如果不存在 text-align: center; 则移除整个 style 属性\n        return \'\';\n    }\n});\n//清理class\ndata = data.replace(/ class\\s*=\\s*[\'\"]([^\'\\\"]*)[\'\"]/g, \'\');\n//清理空格\ndata = data.replace(/\\s+/g, \' \');\ndata = data.trim();\n//清理空span标签\ndata = data.replaceAll(\'<span></span>\', \'\');\n//清理空p标签\ndata = data.replaceAll(\'<p></p>\', \'\');\n//清理空div标签\ndata = data.replaceAll(\'<div></div>\', \'\');\n//清理空table标签\ndata = data .replace(/<table[^>]*>[\\s\\S]*<\\/table>/gi, \'\');\nreturn data;', 8, '2', '2024-08-22 16:27:19', '2024-12-09 23:17:34');
+INSERT INTO `plus_collect` VALUES (2, '人民网-top文章', 'http://www.people.com.cn/', '#rm_topline a', 1, 1, '1', '#newstit', '.rm_txt_con', '1', 'http://js.people.com.cn/n2/2025/0822/c360301-40951625.html', '//图片加域名\nvar urlPrefix = \"http://www.people.com.cn/\";\n    data = data.replace(/(<img[^>]*src=[\"\'])([^\"\']*)(\".*>)/g, function(match, p1, p2, p3) {\n        return p1 + urlPrefix + p2 + p3;\n    });\n//删除分享\ndata = data .replace(/<p\\s+class=\"paper_num\"[^>]*>[\\s\\S]*<\\/p>/gi, \'\');\n//删除编辑\ndata = data .replace(/<div\\s+class=\"(?:edit\\s+)[^\"]*\"[^>]*>[\\s\\S]*<\\/div>/gi, \'\');\n// 移除 style 属性中的所有样式，但保留 text-align: center;\ndata = data .replace(/ style\\s*=\\s*[\'\"]([^\'\"]*)[\'\"]/g, function(match, style) {\n    // 检查是否已包含 text-align: center;\n    if (style.includes(\'text-align: center;\')) {\n        // 如果存在 text-align: center; 则只保留它\n        return ` style=\"text-align: center;\"`;\n    } else {\n        // 如果不存在 text-align: center; 则移除整个 style 属性\n        return \'\';\n    }\n});\n//清理class\ndata = data.replace(/ class\\s*=\\s*[\'\"]([^\'\\\"]*)[\'\"]/g, \'\');\n//清理空格\ndata = data.replace(/\\s+/g, \' \');\ndata = data.trim();\n//清理空span标签\ndata = data.replaceAll(\'<span></span>\', \'\');\n//清理空p标签\ndata = data.replaceAll(\'<p></p>\', \'\');\n//清理空div标签\ndata = data.replaceAll(\'<div></div>\', \'\');\n//清理空table标签\ndata = data .replace(/<table[^>]*>[\\s\\S]*<\\/table>/gi, \'\');\nreturn data;', 8, '2', '2025-08-22 16:27:19', '2025-12-09 23:17:34');
 
 -- ----------------------------
 -- Table structure for plus_gather
@@ -355,7 +355,7 @@ CREATE TABLE `plus_gather`  (
 -- ----------------------------
 -- Records of plus_gather
 -- ----------------------------
-INSERT INTO `plus_gather` VALUES (3, '每日新闻60s', 'https://api.qqsuu.cn/api/dm-60s?type=json', 'let cont = \'\';\ndata.data.news.map((item)=>{\n   cont +=\'<p>\'+ item+\'</p>\'\n})\nreturn {content:cont ,weiyu:data.data.weiyu,title:\'早间新闻—\'+data.data.date};', 8, '2', '2023-11-29 19:10:45', '2024-12-15 15:04:07');
+INSERT INTO `plus_gather` VALUES (3, '每日新闻60s', 'https://api.qqsuu.cn/api/dm-60s?type=json', 'let cont = \'\';\ndata.data.news.map((item)=>{\n   cont +=\'<p>\'+ item+\'</p>\'\n})\nreturn {content:cont ,weiyu:data.data.weiyu,title:\'早间新闻—\'+data.data.date};', 8, '2', '2023-11-29 19:10:45', '2025-12-15 15:04:07');
 
 -- ----------------------------
 -- Table structure for sys_config
@@ -469,7 +469,7 @@ CREATE TABLE `sys_loginlog`  (
 -- ----------------------------
 -- Records of sys_loginlog
 -- ----------------------------
-INSERT INTO `sys_loginlog` VALUES (41, 1, '112.80.234.68', '中国', '江苏省', '南京市', '秦淮区', '中国联通', NULL, NULL, '2024-12-05 22:29:03');
+INSERT INTO `sys_loginlog` VALUES (41, 1, '112.80.234.68', '中国', '江苏省', '南京市', '秦淮区', '中国联通', NULL, NULL, '2025-12-05 22:29:03');
 INSERT INTO `sys_loginlog` VALUES (94, 11, '122.96.45.82', '中国', '', '', '', '', NULL, NULL, '2025-02-23 11:42:52');
 INSERT INTO `sys_loginlog` VALUES (95, 14, '112.80.235.254', '中国', '江苏省', '南京市', '秦淮区', '中国联通', NULL, NULL, '2025-02-26 22:16:04');
 INSERT INTO `sys_loginlog` VALUES (141, 14, '101.125.4.179', '中国', '', '', '', '', NULL, NULL, '2025-08-13 10:26:48');

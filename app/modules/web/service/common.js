@@ -66,7 +66,7 @@ const common = {
    */
   async getArticleList({
     start = 0,
-    len = 5,
+    len = 6,
     attr = "",
     excludeAttr = "",
     type = 2,
