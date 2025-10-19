@@ -243,7 +243,7 @@ CREATE TABLE `cms_site`  (
 -- ----------------------------
 -- Records of cms_site
 -- ----------------------------
-INSERT INTO `cms_site` VALUES (1, '仿真赋能   智算无界', '/public/template/default/img/logo.png', 'www.xxx.top2', 'xxx@qq.com1', NULL, '皖ICP备2025031001号-11', '', '', '演示站', '演示站', '是一款基于Express和MySQL研发的高质量实用型CMS管理系统。它具备多种类型网站开发，易扩展、基于模块化和插件化开发模式，适用于商用企业级程序开发。', 'default', '1', NULL, '2025-08-13 10:27:21');
+INSERT INTO `cms_site` VALUES (1, '仿真赋能   智算无界', '/public/template/default/img/logo.png', 'www.changfengdao.com', 'lihongyan@changfengdao.com', NULL, '京ICP备2025145523号', '', '', '长风道官网', '长风道官网', '长风道官方网站。', 'default', '1', NULL, '2025-08-13 10:27:21');
 
 -- ----------------------------
 -- Table structure for cms_slide
