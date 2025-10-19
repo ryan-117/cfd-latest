@@ -1,20 +1,29 @@
-<header id="header">
-  <!-- logo -->
-  <img class="logo" src="{{static_url}}/img/logo-1.png" alt="" />
-  <!-- 菜单 -->
-  {{include './nav.html'}}
-  <!-- 登录、语言等 -->
-  <div></div>
+<header class="header-container">
+  <div id="header">
+    <!-- logo -->
+    <img class="logo" src="{{static_url}}/img/logo-1.png" alt="" />
+    <!-- 菜单 -->
+    {{include './nav.html'}}
+    <!-- 登录、语言等 -->
+    <div></div>
+  </div>
 </header>
 <style>
+  .header-container {
+    width: 100%;
+    height: 60px;
+  }
   #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 0 auto;
-    min-width: 600px;
-    padding-top: 16px;
+    z-index: 100;
   }
   #header .logo {
     margin: 0 44px;

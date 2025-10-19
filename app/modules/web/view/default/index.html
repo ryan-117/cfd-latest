@@ -15,7 +15,7 @@
 
 <body id="index">
     <!-- 头部 -->
-    {{include './common/header.html'}}
+    {{include './common/header2.html'}}
     <!-- 顶部banner -->
     <div class="top">
         <img src="{{static_url}}/img/index/banner.png" alt="" class="banner">
@@ -92,6 +92,7 @@
     <!-- 企业动态 -->
     <div class="container news-container" id="news-section">
         <div class="container-title">企业动态</div>
+        {{hot}}
         <div class="news-content">
             {{each hot}}
                 <a class="news-item" href="{{$value.path}}/article-{{$value.id}}.html">
