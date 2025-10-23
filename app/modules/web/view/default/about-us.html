@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="{{site.description}}">
+    <meta name="keywords" content="{{site.keywords}}" />
+    <meta property="og:title" content="{{site.title}}" />
+    <meta property="og:description" content="{{site.description}}" />
+    <title>{{site.name}}</title>
+    <meta name="viewport" content="width=1240">
+    <link rel="stylesheet" href="{{static_url}}/css/index.css" />
+</head>
+
+<body id="about-us">
+    <!-- 头部 -->
+    {{include './common/header2.html'}}
+    <!-- 主要内容区域 -->
+    <div class="about-container">
+        <!-- 头部横幅区域 -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <div>
+                    <h1 class="hero-title">关于我们</h1>
+                    <p class="hero-subtitle">长风破浪会有时</p>
+                </div>
+            </div>
+            <img src="{{static_url}}/img/aboutus/about-us-banner.png" alt="关于我们背景图" class="hero-bg-img">
+        </div>
+
+        <!-- 导航标签 -->
+        <div class="tab-container">
+            <div class="tab-card active" data-tab="profile">
+                <div class="tab-text">公司简介</div>
+            </div>
+            <div class="tab-card" data-tab="vision">
+                <div class="tab-text">公司愿景</div>
+            </div>
+            <div class="tab-card" data-tab="history">
+                <div class="tab-text">发展历程</div>
+            </div>
+        </div>
+
+        <!-- 公司简介部分 -->
+        <div class="content-section" id="profile">
+            <div class="section-title">公司简介</div>
+            <div class="profile-content">
+                <div class="profile-left">
+                    <div class="company-logo">
+                        <div class="logo-icon">F</div>
+                        <div class="logo-text">长风道</div>
+                    </div>
+                </div>
+                <div class="profile-right">
+                    <div class="quote-text">
+                        <p class="quote">李白《行路难》："长风破浪会有时，直挂云帆济沧海"</p>
+                        <p class="sub-title">——"长风”作路，“道”为径。</p>
+                        <p class="description">自主工业软件发展之旅，充满挑战与艰辛，尤以计算流体力学领域为甚，需要长期算法优化与工程实践积累。长风道秉持长期主义理念，矢志不渝推进技术迭代，凭借坚实研发实力，遵循产品优先原则，精心构筑行业标杆级仿真工具集。于企业经营中厚积薄发，矢志不渝将价值传递用户，终将促成软件工程化应用，实现国产化替代，打破国外商业软件垄断，破除“卡脖子”困境。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 统计数据 -->
+            <div class="stats-section">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">团队人数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">85%+</div>
+                        <div class="stat-label">研发占比</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">80%+</div>
+                        <div class="stat-label">硕博占比</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">软著专利</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-wave">
+                <img src="{{static_url}}/img/product/13.png" alt="波浪装饰" class="wave-img">
+            </div>
+        </div>
+
+        <!-- 公司愿景部分 -->
+        <div class="content-section" id="vision">
+            <div class="section-title">公司愿景</div>
+            <div class="vision-content">
+                <div class="vision-left">
+                    <div class="vision-item">
+                        <h3 class="vision-title">愿景 Vision</h3>
+                        <p class="vision-text">
+                            成为全球领先的航空科技创新企业，为航空行业提供最先进的技术解决方案，
+                            推动航空科技的持续进步，让飞行更加安全、高效、智能。
+                        </p>
+                    </div>
+                    <div class="vision-item">
+                        <h3 class="vision-title">使命 Mission</h3>
+                        <p class="vision-text">
+                            致力于航空科技的创新与发展，通过先进的技术和专业的服务，
+                            为航空行业客户提供优质的产品和解决方案，推动航空产业的数字化转型。
+                        </p>
+                    </div>
+                </div>
+                <div class="vision-right">
+                    <img src="{{static_url}}/img/joinus/banner.png" alt="愿景背景图" class="vision-bg">
+                </div>
+            </div>
+        </div>
+
+        <!-- 发展历程部分 -->
+        <div class="content-section" id="history">
+            <div class="section-title">发展历程</div>
+            <div class="timeline-container">
+                <div class="timeline-bg">
+                    <img src="{{static_url}}/img/joinus/banner.png" alt="世界地图背景" class="timeline-bg-img">
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024年-11月</div>
+                            <div class="timeline-desc">公司成立，开始航空科技研发</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025年-7月</div>
+                            <div class="timeline-desc">首个产品原型完成</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025年-10月</div>
+                            <div class="timeline-desc">AeroV项目启动</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024年-9月</div>
+                            <div class="timeline-desc">团队组建完成</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025年-5月</div>
+                            <div class="timeline-desc">获得首轮融资</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025年-9月</div>
+                            <div class="timeline-desc">产品正式发布</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item future">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">未来可期</div>
+                            <div class="timeline-desc">持续创新，引领未来</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* 头部横幅区域 */
+        .hero-section {
+            background: #044493;
+            display: flex;
+        }
+
+        .hero-bg-img {
+            width: 60%;
+            height: 100%;
+        }
+
+        .hero-content {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-illustration {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .tab-card {
+            width: 172px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: white;
+            border: 1px solid #80CBFF;
+            cursor: pointer;
+        }
+
+        .tab-card:first-child {
+            border-radius: 8px 0px 0px 8px;
+        }
+        .tab-card:last-child {
+            border-radius: 0px 8px 8px 0px;
+        }
+
+        .tab-card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .tab-card.active {
+            border-color: #0098FF;
+            background: #0098FF;
+            color: white;
+        }
+
+        .tab-text {
+            font-size: 18px;
+            font-weight: 500;
+            color: #40506B;
+            transition: color 0.3s ease;
+        }
+
+        .tab-card.active .tab-text {
+            color: white;
+        }
+
+        /* 内容区域 */
+        .content-section {
+            padding-top: 46px;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 30px;
+        }
+
+        /* 公司简介样式 */
+        .profile-content {
+            width: 1280px;
+            height: 516px;
+            margin: 0 auto;
+            box-shadow: 0px 12px 24px 0px rgba(23,38,65,0.1);
+            border-radius: 8px;
+            z-index: 20;
+        }
+
+        .profile-left {
+            flex: 1;
+        }
+
+        .company-logo {
+            text-align: center;
+        }
+
+        .logo-icon {
+            width: 80px;
+            height: 80px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+
+        .profile-right {
+            flex: 2;
+        }
+
+        .quote {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .sub-title {
+            color: #0098FF;
+            font-size: 18px;
+        }
+
+        .description {
+            font-size: 18px;
+            color: #000;
+        }
+
+        /* 统计数据 */
+        .stats-section {
+            padding: 40px 0;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #3b82f6;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .stats-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 10;
+        }
+
+        .wave-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.1;
+        }
+
+        /* 公司愿景样式 */
+        .vision-content {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .vision-left {
+            flex: 2;
+        }
+
+        .vision-right {
+            flex: 1;
+        }
+
+        .vision-item {
+            margin-bottom: 40px;
+        }
+
+        .vision-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        .vision-text {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .vision-bg {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            opacity: 0.3;
+        }
+
+        /* 发展历程样式 */
+        .timeline-container {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .timeline-bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.1;
+        }
+
+        .timeline {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: #3b82f6;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .timeline-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 100px;
+            height: 2px;
+            background: #3b82f6;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item:last-child .timeline-dot::after {
+            display: none;
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .timeline-desc {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .timeline-item.future .timeline-dot {
+            background: #10b981;
+        }
+
+        .timeline-item.future .timeline-date {
+            color: #10b981;
+        }
+    </style>
+
+    <script>
+        // 标签滚动功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabCards = document.querySelectorAll('.tab-card');
+            const sections = document.querySelectorAll('.content-section');
+
+            // 点击tab滚动到对应区域
+            tabCards.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // 移除所有活动状态
+                    tabCards.forEach(t => t.classList.remove('active'));
+
+                    // 添加当前活动状态
+                    this.classList.add('active');
+
+                    // 滚动到对应区域
+                    const targetSection = document.getElementById(this.dataset.tab);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // 监听滚动，自动更新活动tab
+            function updateActiveTab() {
+                const scrollPosition = window.scrollY + 200;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.id;
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        // 移除所有活动状态
+                        tabCards.forEach(tab => tab.classList.remove('active'));
+
+                        // 添加当前活动状态
+                        const activeTab = document.querySelector(`[data-tab="${sectionId}"]`);
+                        if (activeTab) {
+                            activeTab.classList.add('active');
+                        }
+                    }
+                });
+            }
+
+            // 监听滚动事件
+            window.addEventListener('scroll', updateActiveTab);
+
+            // 初始化时检查当前活动区域
+            updateActiveTab();
+        });
+    </script>
+
+    <!-- 底部 -->
+    {{include './common/footer.html'}}
+</body>
+
+</html>

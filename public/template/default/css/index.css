@@ -1,6 +1,21 @@
 /* banner */
+#index .top {
+  position: relative;
+}
 #index .top .banner {
   width: 100%;
+}
+#index .top .banner-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 44px;
+  line-height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 /* 首页模块 */
 #index .container {
