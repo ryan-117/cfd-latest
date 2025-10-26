@@ -45,12 +45,7 @@
         <div class="content-section" id="profile">
             <div class="section-title">公司简介</div>
             <div class="profile-content">
-                <div class="profile-left">
-                    <div class="company-logo">
-                        <div class="logo-icon">F</div>
-                        <div class="logo-text">长风道</div>
-                    </div>
-                </div>
+                <img class="profile-left" src="{{static_url}}/img/logo.png" alt="" />
                 <div class="profile-right">
                     <div class="quote-text">
                         <p class="quote">李白《行路难》："长风破浪会有时，直挂云帆济沧海"</p>
@@ -89,25 +84,16 @@
         <!-- 公司愿景部分 -->
         <div class="content-section" id="vision">
             <div class="section-title">公司愿景</div>
-            <div class="vision-content">
+            <div class="profile-content">
                 <div class="vision-left">
                     <div class="vision-item">
-                        <h3 class="vision-title">愿景 Vision</h3>
-                        <p class="vision-text">
-                            成为全球领先的航空科技创新企业，为航空行业提供最先进的技术解决方案，
-                            推动航空科技的持续进步，让飞行更加安全、高效、智能。
-                        </p>
+                        <h3 class="vision-title">愿景 <span>Vision</span></h3>
+                        <p class="vision-text">成为全球工业仿真软件领“数字风洞”的领军品牌，用自主创新的计算流体力学 （CFD）工具运用虚实结合技术赋能研发企业的智能化升级。</p>
                     </div>
                     <div class="vision-item">
-                        <h3 class="vision-title">使命 Mission</h3>
-                        <p class="vision-text">
-                            致力于航空科技的创新与发展，通过先进的技术和专业的服务，
-                            为航空行业客户提供优质的产品和解决方案，推动航空产业的数字化转型。
-                        </p>
+                        <h3 class="vision-title">使命 <span>Mission</span></h3>
+                        <p class="vision-text">以“长风破浪〞之势突破国外商软的技术垄断，通过自主可控的仿真软件结合人工智能（Al 助力中国高端智造，体现产品优先的攻坚方向-以扎实的底层技术打造行业标杆工具和工程咨询服务。</p>
                     </div>
-                </div>
-                <div class="vision-right">
-                    <img src="{{static_url}}/img/joinus/banner.png" alt="愿景背景图" class="vision-bg">
                 </div>
             </div>
         </div>
@@ -115,66 +101,15 @@
         <!-- 发展历程部分 -->
         <div class="content-section" id="history">
             <div class="section-title">发展历程</div>
-            <div class="timeline-container">
-                <div class="timeline-bg">
-                    <img src="{{static_url}}/img/joinus/banner.png" alt="世界地图背景" class="timeline-bg-img">
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2024年-11月</div>
-                            <div class="timeline-desc">公司成立，开始航空科技研发</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2025年-7月</div>
-                            <div class="timeline-desc">首个产品原型完成</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2025年-10月</div>
-                            <div class="timeline-desc">AeroV项目启动</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2024年-9月</div>
-                            <div class="timeline-desc">团队组建完成</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2025年-5月</div>
-                            <div class="timeline-desc">获得首轮融资</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2025年-9月</div>
-                            <div class="timeline-desc">产品正式发布</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item future">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">未来可期</div>
-                            <div class="timeline-desc">持续创新，引领未来</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <img class="history-img" src="{{static_url}}/img/aboutus/history.png" alt="" />
         </div>
     </div>
 
     <style>
+        #about-us {
+            margin: 0;
+            padding: 0;
+        }
         /* 头部横幅区域 */
         .hero-section {
             background: #044493;
@@ -270,44 +205,53 @@
 
         /* 公司简介样式 */
         .profile-content {
+            box-sizing: border-box;
             width: 1280px;
             height: 516px;
             margin: 0 auto;
             box-shadow: 0px 12px 24px 0px rgba(23,38,65,0.1);
             border-radius: 8px;
-            z-index: 20;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 68px;
         }
 
         .profile-left {
+            width: 218px;
+            height: 194px;
+            margin: 0 104px 0 44px;
+        }
+
+        .profile-right {
             flex: 1;
         }
 
-        .company-logo {
-            text-align: center;
+        .vision-left {
+            width: 588px;
+            margin: 0 82px;
+            color: #000;
         }
-
-        .logo-icon {
-            width: 80px;
-            height: 80px;
-            background: #3b82f6;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            font-weight: bold;
-            margin: 0 auto 20px;
+        .vision-title {
+            font-size: 32px;
         }
-
-        .logo-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1e3a8a;
+        .vision-title span {
+            color: #ADDEFF;
+        }
+        .vision-text {
+            font-size: 18px;
+            line-height: 32px;
         }
 
         .profile-right {
             flex: 2;
+        }
+
+        .history-img {
+            width: 1433px;
+            height: 609px;
+            display: block;
+            margin: 0 auto;
         }
 
         .quote {
@@ -330,6 +274,8 @@
         /* 统计数据 */
         .stats-section {
             padding: 40px 0;
+            width: 1280px;
+            margin: 0 auto;
         }
 
         .stats-container {
@@ -370,132 +316,6 @@
             height: 100%;
             object-fit: cover;
             opacity: 0.1;
-        }
-
-        /* 公司愿景样式 */
-        .vision-content {
-            display: flex;
-            gap: 60px;
-            align-items: flex-start;
-        }
-
-        .vision-left {
-            flex: 2;
-        }
-
-        .vision-right {
-            flex: 1;
-        }
-
-        .vision-item {
-            margin-bottom: 40px;
-        }
-
-        .vision-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #1e3a8a;
-            margin-bottom: 15px;
-        }
-
-        .vision-text {
-            font-size: 16px;
-            color: #666;
-            line-height: 1.8;
-        }
-
-        .vision-bg {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            opacity: 0.3;
-        }
-
-        /* 发展历程样式 */
-        .timeline-container {
-            position: relative;
-            padding: 40px 0;
-        }
-
-        .timeline-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .timeline-bg-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.1;
-        }
-
-        .timeline {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .timeline-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            flex: 1;
-            min-width: 120px;
-        }
-
-        .timeline-dot {
-            width: 12px;
-            height: 12px;
-            background: #3b82f6;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            position: relative;
-        }
-
-        .timeline-dot::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 100%;
-            width: 100px;
-            height: 2px;
-            background: #3b82f6;
-            transform: translateY(-50%);
-        }
-
-        .timeline-item:last-child .timeline-dot::after {
-            display: none;
-        }
-
-        .timeline-date {
-            font-size: 14px;
-            font-weight: bold;
-            color: #1e3a8a;
-            margin-bottom: 8px;
-        }
-
-        .timeline-desc {
-            font-size: 12px;
-            color: #666;
-            line-height: 1.4;
-        }
-
-        .timeline-item.future .timeline-dot {
-            background: #10b981;
-        }
-
-        .timeline-item.future .timeline-date {
-            color: #10b981;
         }
     </style>
 
