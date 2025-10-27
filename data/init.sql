@@ -246,7 +246,7 @@ CREATE TABLE `cms_site`  (
 -- ----------------------------
 -- Records of cms_site
 -- ----------------------------
-INSERT INTO `cms_site` VALUES (1, '南京长风道科技有限公司', '/public/template/default/img/logo.png', 'www.changfengdao.com', 'lihongyan@changfengdao.com', NULL, '京ICP备2025145523号', '', '', '长风道官网', '长风道官网', '长风道官方网站。', 'default', '1', NULL, '2025-08-13 10:27:21');
+INSERT INTO `cms_site` VALUES (1, '北京长风道科技有限公司', '/public/template/default/img/logo.png', 'www.changfengdao.com', 'lihongyan@changfengdao.com', NULL, '京ICP备2025145523号', '', '', '长风道官网', '长风道官网', '长风道官方网站。', 'default', '1', NULL, '2025-08-13 10:27:21');
 
 -- ----------------------------
 -- Table structure for cms_slide
