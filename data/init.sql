@@ -47,8 +47,10 @@ CREATE TABLE `cms_article`  (
 -- ----------------------------
 -- Records of cms_article
 -- ----------------------------
-INSERT INTO `cms_article` VALUES (3, 4, '', '后台基本操作', '', '2', '', '', '', '', '后台基本操作', '', '<p><iframe src=\"//player.bilibili.com/player.html?isOutside=true&aid=877077167&bvid=BV17N4y1Y7WC&cid=1362009352&p=1\" height=\"520\" frameborder=\"no\" scrolling=\"no\" allowfullscreen=\"allowfullscreen\"></iframe></p>', 0, 8, '', '2025-09-13 22:59:58', '2025-02-13 22:38:52');
-INSERT INTO `cms_article` VALUES (22, 8, '', '欢迎使用系统', '', '2', '', '', '', '', '1', '/public/uploads/default/2025/04/02/1743577048415_source_01.jpg', '欢迎使用系统', 0, 2, '', '2025-04-02 14:28:02', '2025-08-12 17:51:17');
+INSERT INTO `cms_article` VALUES (1, 3, '', '招聘', '', '2', '', '', '', '', '大批岗位招聘', '/public/uploads/default/2025/10/27/1761556112268_source_mceclip0.png', 'src="/public/uploads/default/2025/10/27/1761556755301_source_mceclip4.png"></p>', 0, 8, '', '2025-09-13 22:59:58', '2025-02-13 22:38:52');
+INSERT INTO `cms_article` VALUES (2, 3, '', '产品重磅发布', '', '2', '', '', '', '', '产品发布了！！！', '/public/cover/03.jpg', '<p><img src="/public/uploads/default/2025/10/27/1761556664244_source_mceclip3.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><span style="font-size: 20px;"><strong>新产品发布，欢迎试用</strong></span></p>
+<p><img src="/public/uploads/default/2025/10/27/1761556633997_source_mceclip1.png" style="display: block; margin-left: auto; margin-right: auto;"></p>', 0, 2, '', '2025-04-02 14:28:02', '2025-08-12 17:51:17');
 
 -- ----------------------------
 -- Table structure for cms_articletag
@@ -244,7 +246,7 @@ CREATE TABLE `cms_site`  (
 -- ----------------------------
 -- Records of cms_site
 -- ----------------------------
-INSERT INTO `cms_site` VALUES (1, '仿真赋能   智算无界', '/public/template/default/img/logo.png', 'www.changfengdao.com', 'lihongyan@changfengdao.com', NULL, '京ICP备2025145523号', '', '', '长风道官网', '长风道官网', '长风道官方网站。', 'default', '1', NULL, '2025-08-13 10:27:21');
+INSERT INTO `cms_site` VALUES (1, '南京长风道科技有限公司', '/public/template/default/img/logo.png', 'www.changfengdao.com', 'lihongyan@changfengdao.com', NULL, '京ICP备2025145523号', '', '', '长风道官网', '长风道官网', '长风道官方网站。', 'default', '1', NULL, '2025-08-13 10:27:21');
 
 -- ----------------------------
 -- Table structure for cms_slide
