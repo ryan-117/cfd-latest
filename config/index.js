@@ -11,11 +11,13 @@ import { statics } from "./static.js";
 import { upload } from "./upload.js";
 import { views } from "./view.js";
 import { cors } from "./cors.js";
+import { WAF_LEVEL } from "./waf.js";
 
 export default {
   ...app,
   cache,
   PASSWORD_SALT,
+  WAF_LEVEL,
   ...jwt,
   db,
   logger,
