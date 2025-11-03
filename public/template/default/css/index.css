@@ -77,7 +77,7 @@
   margin-bottom: 36px;
 }
 /* 操作按钮 */
-#index .product-container .product .product-content .operate a {
+#index .product-container .product .product-content .operate a, #index .product-container .product .product-content .operate button {
   box-shadow: 0px 2px 19px 0px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   border: 1px solid #0098ff;
@@ -85,15 +85,15 @@
   font-size: 14px;
   margin-right: 18px;
 }
-#index .product-container .product .product-content .operate a img {
+#index .product-container .product .product-content .operate a img, #index .product-container .product .product-content .operate button img {
   width: 14px;
   height: 14px;
 }
-#index .product-container .product .product-content .operate a.main {
+#index .product-container .product .product-content .operate a.main, #index .product-container .product .product-content .operate button.main {
   background: #0098ff;
   color: #fff;
 }
-#index .product-container .product .product-content .operate a.sub {
+#index .product-container .product .product-content .operate a.sub, #index .product-container .product .product-content .operate button.sub {
   background: #ffffff;
   color: #0098ff;
   text-decoration: none;

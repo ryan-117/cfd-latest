@@ -1,0 +1,201 @@
+<div class="flex search-wrap"></div>
+
+<!-- 体验表单弹窗 -->
+<div class="exp-mask" id="exp-mask" style="display:none;"></div>
+<div class="exp-modal" id="exp-modal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="exp-title">
+	<div class="exp-header">
+		<div class="exp-title" id="exp-title">申请试用产品</div>
+		<button type="button" class="exp-close" id="exp-close" aria-label="关闭">×</button>
+	</div>
+	<div class="exp-subtitle">提交信息后，专属顾问将会与您联系</div>
+	<form class="exp-form" id="exp-form">
+		<div class="exp-grid">
+			<label class="exp-field">
+				<span class="exp-label">姓名</span>
+				<input class="exp-input" type="text" name="name" placeholder="姓名" autocomplete="name" />
+			</label>
+			<label class="exp-field">
+				<span class="exp-label">手机号</span>
+				<input class="exp-input" type="tel" name="phone" placeholder="手机号" autocomplete="tel" />
+			</label>
+			<label class="exp-field exp-required">
+				<span class="exp-label">您的单位名称是？<i>*</i></span>
+				<input class="exp-input" type="text" name="company" placeholder="单位名称" />
+			</label>
+			<label class="exp-field exp-required">
+				<span class="exp-label">您的邮箱地址？<i>*</i></span>
+				<input class="exp-input" type="email" name="email" placeholder="邮箱" autocomplete="email" />
+			</label>
+			<label class="exp-field">
+				<span class="exp-label">您所在的地点是哪里？</span>
+				<input class="exp-input" type="text" name="province" placeholder="省份" />
+			</label>
+			<label class="exp-field">
+				<span class="exp-label">您从事的是什么行业？</span>
+				<input class="exp-input" type="text" name="industry" placeholder="行业" />
+			</label>
+			<label class="exp-field exp-col-2 exp-required">
+				<span class="exp-label">请描述下试用场景？<i>*</i></span>
+				<input class="exp-input" type="text" name="scene" placeholder="试用场景" />
+			</label>
+		</div>
+		<div class="exp-label exp-required exp-mt-16">您的意向试用产品是什么？<i>*</i></div>
+		<div class="exp-checkboxes">
+			<label class="exp-checkbox">
+				<input type="checkbox" name="products" value="CFD" />
+				<span>CFD长风通用流体仿真分析软件</span>
+			</label>
+			<label class="exp-checkbox">
+				<input type="checkbox" name="products" value="RASE" />
+				<span>RASE汽车造型快速评估软件</span>
+			</label>
+			<label class="exp-checkbox">
+				<input type="checkbox" name="products" value="AiAero" />
+				<span>AiAero智能风阻预测软件</span>
+			</label>
+		</div>
+		<button class="exp-submit" id="exp-submit" type="submit" disabled>立即提交</button>
+		<div class="exp-msg" id="exp-msg" aria-live="polite"></div>
+	</form>
+</div>
+
+<style>
+	/* 容器与字体继承工程风格 */
+	#about-us, #home, body { -webkit-font-smoothing: antialiased; }
+
+	/* 遮罩/弹窗 */
+	.exp-mask {
+		position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 999; backdrop-filter: blur(1px);
+	}
+	.exp-modal {
+		position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+		width: 860px; max-width: calc(100vw - 32px);
+		background: #fff; border-radius: 8px; z-index: 1000; box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+		padding: 20px 24px 24px;
+	}
+	.exp-header { display: flex; align-items: center; justify-content: space-between; }
+	.exp-title { font-size: 20px; font-weight: 600; color: #111827; }
+	.exp-subtitle { color: #6B7280; font-size: 13px; margin: 4px 0 12px; }
+	.exp-close { border: 0; background: transparent; font-size: 24px; line-height: 1; cursor: pointer; color: #6B7280; }
+
+	/* 表单布局 */
+	.exp-form { margin-top: 6px; }
+	.exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; }
+	.exp-col-2, .exp-field.exp-col-2 { grid-column: span 2; }
+	.exp-field { display: flex; flex-direction: column; }
+	.exp-label { font-size: 14px; color: #111827; margin-bottom: 6px; }
+	.exp-required i { color: #EF4444; font-style: normal; margin-left: 4px; }
+	.exp-input { height: 40px; padding: 0 12px; border: 1px solid #E5E7EB; border-radius: 6px; outline: none; font-size: 14px; color: #111827; }
+	.exp-input::placeholder { color: #9CA3AF; }
+	.exp-input:focus { border-color: #3B82F6; box-shadow: 0 0 0 3px rgba(59,130,246,0.15); }
+
+	/* 复选框 */
+	.exp-checkboxes { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 8px; }
+	.exp-checkbox { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #111827; cursor: pointer; }
+	/* 自定义复选框，美化选中态 */
+	.exp-checkbox input {
+		-webkit-appearance: none; appearance: none;
+		width: 18px; height: 18px; border-radius: 4px; display: inline-block; position: relative;
+		border: 2px solid #80CBFF; background: #fff; transition: all .2s ease; flex: 0 0 18px;
+	}
+	.exp-checkbox:hover input { box-shadow: 0 0 0 3px rgba(0,152,255,.12); }
+	.exp-checkbox input:focus { outline: none; box-shadow: 0 0 0 3px rgba(0,152,255,.2); }
+	.exp-checkbox input:checked { background: #0098FF; border-color: #0098FF; }
+	.exp-checkbox input:checked::after {
+		content: ""; position: absolute; left: 4px; top: 1px; width: 6px; height: 10px;
+		border: 2px solid #fff; border-top: 0; border-left: 0; transform: rotate(45deg);
+	}
+
+	/* 按钮与提示 */
+	.exp-submit { width: 200px; height: 44px; margin: 18px auto 0; display: block; border-radius: 22px; border: 0; cursor: pointer; color: #fff; font-weight: 600; background: #9CA3AF; }
+	.exp-submit:not([disabled]) { background: #3B82F6; }
+	.exp-submit[disabled] { cursor: not-allowed; }
+	.exp-msg { text-align: center; font-size: 13px; margin-top: 10px; color: #EF4444; }
+	.exp-mt-16 { margin-top: 16px; }
+
+	@media (max-width: 768px) {
+		.exp-modal { width: 94vw; padding: 16px; }
+		.exp-grid { grid-template-columns: 1fr; }
+		.exp-col-2, .exp-field.exp-col-2 { grid-column: span 1; }
+	}
+</style>
+
+<script>
+	// 打开/关闭方法供外部调用
+	window.openExperienceModal = function() {
+		document.getElementById('exp-mask').style.display = 'block';
+		document.getElementById('exp-modal').style.display = 'block';
+	}
+	window.closeExperienceModal = function() {
+		document.getElementById('exp-mask').style.display = 'none';
+		document.getElementById('exp-modal').style.display = 'none';
+	}
+
+    const mask = document.getElementById('exp-mask');
+    const modal = document.getElementById('exp-modal');
+    const btnClose = document.getElementById('exp-close');
+    const form = document.getElementById('exp-form');
+    const submitBtn = document.getElementById('exp-submit');
+    const msg = document.getElementById('exp-msg');
+
+    function validate() {
+        const fd = new FormData(form);
+        const email = (fd.get('email') || '').toString().trim();
+        const company = (fd.get('company') || '').toString().trim();
+        const scene = (fd.get('scene') || '').toString().trim();
+        const products = form.querySelectorAll('input[name="products"]:checked');
+        const emailOk = /^[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}$/.test(email);
+        const requiredOk = company.length > 0 && scene.length > 0 && products.length > 0 && emailOk;
+        submitBtn.disabled = !requiredOk;
+        msg.textContent = requiredOk ? '' : '请完善必填项（含邮箱格式、单位、场景、意向产品）';
+        return requiredOk;
+    }
+
+    form.addEventListener('input', validate);
+    form.addEventListener('change', validate);
+
+    mask.addEventListener('click', window.closeExperienceModal);
+    btnClose.addEventListener('click', window.closeExperienceModal);
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        if (!validate()) return;
+        submitBtn.disabled = true;
+        submitBtn.textContent = '提交中...';
+        msg.textContent = '';
+        try {
+            const fd = new FormData(form);
+            // 将多选项转为数组
+            const products = Array.from(form.querySelectorAll('input[name="products"]:checked')).map(i => i.value);
+            const payload = {
+                name: (fd.get('name') || '').toString().trim(),
+                phone: (fd.get('phone') || '').toString().trim(),
+                email: (fd.get('email') || '').toString().trim(),
+                company: (fd.get('company') || '').toString().trim(),
+                province: (fd.get('province') || '').toString().trim(),
+                industry: (fd.get('industry') || '').toString().trim(),
+                scene: (fd.get('scene') || '').toString().trim(),
+                products
+            };
+            // 占位接口地址，可按需替换
+            const resp = await fetch('/api/experience/apply', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            if (!resp.ok) throw new Error('网络错误');
+            msg.style.color = '#10B981';
+            msg.textContent = '提交成功，我们将尽快与您联系！';
+            submitBtn.textContent = '已提交';
+            setTimeout(window.closeExperienceModal, 1200);
+        } catch (err) {
+            msg.style.color = '#EF4444';
+            msg.textContent = '提交失败，请稍后重试';
+            submitBtn.disabled = false;
+            submitBtn.textContent = '立即提交';
+        }
+    });
+
+    // 初始禁用状态
+    validate();
+</script>
