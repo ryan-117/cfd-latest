@@ -201,6 +201,43 @@ CREATE TABLE `cms_message`  (
 -- ----------------------------
 INSERT INTO `cms_message` VALUES (1, '1', '1', '1111', '1', '1', '1', '1', '2025-04-02 15:47:25', '2025-04-02 15:47:25');
 
+
+-- ----------------------------
+-- Table structure for cms_trial_application
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_trial_application`;
+CREATE TABLE `cms_trial_application`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '姓名',
+  `tel` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '电话',
+  `company` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '公司名称',
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '邮箱',
+  `province` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '所在省份',
+  `industry` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '从事行业',
+  `scene` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '试用场景',
+  `trial_products` set('CFD','RASE','AiAero') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '试用产品（多选）CFD-长风通用流体仿真分析软件 RASE-汽车造型快速评估软件 AiAero-智能风阻预测软件',
+  `createdAt` datetime NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updatedAt` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '试用申请' ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of cms_trial_application
+-- ----------------------------
+INSERT INTO `cms_trial_application` VALUES (
+  1,
+  '张明-测试',
+  '13800000000',
+  'xx汽车科技有限公司',
+  'zhangming@test.com',
+  '北京市',
+  '汽车',
+  '汽车制造',
+  'CFD,AiAero',
+  '2025-04-02 15:47:25',
+  '2025-04-02 15:47:25'
+);
+
 -- ----------------------------
 -- Table structure for cms_model
 -- ----------------------------
