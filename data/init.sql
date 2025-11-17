@@ -203,10 +203,10 @@ INSERT INTO `cms_message` VALUES (1, '1', '1', '1111', '1', '1', '1', '1', '2025
 
 
 -- ----------------------------
--- Table structure for cms_trial_application
+-- Table structure for cms_trial
 -- ----------------------------
-DROP TABLE IF EXISTS `cms_trial_application`;
-CREATE TABLE `cms_trial_application`  (
+DROP TABLE IF EXISTS `cms_trial`;
+CREATE TABLE `cms_trial`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '姓名',
   `tel` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '电话',
@@ -222,9 +222,9 @@ CREATE TABLE `cms_trial_application`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '试用申请' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
--- Records of cms_trial_application
+-- Records of cms_trial
 -- ----------------------------
-INSERT INTO `cms_trial_application` VALUES (
+INSERT INTO `cms_trial` VALUES (
   1,
   '张明-测试',
   '13800000000',
@@ -637,6 +637,8 @@ INSERT INTO `sys_menu` VALUES (94, 0, '资源管理', 'resource', 0, '/resource'
 INSERT INTO `sys_menu` VALUES (95, 94, '前端模板', 'template', 0, '/template', '@/views/vip/codeEditor/index.vue', '', NULL, 'api:template:list', 'C', '2', '2', '1', NULL, '', NULL, '', NULL, '');
 INSERT INTO `sys_menu` VALUES (96, 95, '模板更新', 'template-edit', 0, '', '', '', NULL, 'api:template:update', 'F', '2', '2', '1', NULL, '', NULL, '', NULL, '');
 INSERT INTO `sys_menu` VALUES (97, 94, '附件管理', '', 0, '/upload', '@/views/vip/data.vue', '', NULL, 'api:upload:list', 'C', '2', '2', '1', NULL, '', NULL, '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1000, 8, '试用申请管理', 'trial-index', 0, '/trial', '@/views/cms/trial/index.vue', '', NULL, 'api:trial:list', 'C', '2', '2', '1', NULL, '', NULL, '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1001, 1000, '试用申请查询', '', 0, '', NULL, '', NULL, 'api:trial:query', 'F', '2', '2', '2', NULL, '', NULL, '', NULL, '');
 
 -- ----------------------------
 -- Table structure for sys_notice

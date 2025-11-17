@@ -2,7 +2,7 @@ import auth  from "../../middleware/auth.js";
 import init from "../../middleware/init.js";
 
 
-const { 
+const {
 loadController } = Chan.helper;
 const { singleUpload, } = Chan.common;
 
@@ -40,6 +40,13 @@ export default (app, router, config) => {
   router.post("/article/create", auth(), controller.article.create);
   router.get("/article/delete", auth(), controller.article.delete);
   router.post("/article/update", auth(), controller.article.update);
+
+  // 试用栏目
+  router.get("/trial/list", controller.trial.list);
+  router.get("/trial/tongji", controller.trial.tongji);
+  router.get("/trial/search", controller.trial.search);
+  router.get("/trial/detail", controller.trial.detail);
+  router.get("/trial/findField", auth(), controller.trial.findField);
 
   //上传
   //router.post("/upload", auth(), upload.any(), controller.article.upload);
