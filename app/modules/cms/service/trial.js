@@ -29,39 +29,24 @@ async function getImgsByTrialId(id, arr) {
 }
 let TrialService ={
   // 试用列表
-  async list(cur = 1, pageSize = 10, id) {
+  async list(cur = 1, pageSize = 10) {
     try {
-      // 查询个数
-      let sql;
-      if (id) {
-        sql = `SELECT COUNT(id) as count FROM ${model} WHERE cid IN (${id})`;
-      } else {
-        sql = `SELECT COUNT(id) as count FROM ${model}`;
-      }
-      const total = await knex.raw(sql);
-      const offset = parseInt((cur - 1) * pageSize);
-      let list;
-      if (id) {
-        list = await knex
-          .select()
-          .from(model)
-          .where("cid", "=", id)
-          .limit(pageSize)
-          .offset(offset)
-          .orderBy("id", "desc");
-      } else {
-        list = await knex
-          .select()
-          .from(model)
-          .limit(pageSize)
-          .offset(offset)
-          .orderBy("id", "desc");
-      }
-      const count = total[0][0].count;
+      const current = Math.max(parseInt(cur) || 1, 1);
+      const size = Math.max(parseInt(pageSize) || 10, 1);
+      const offset = (current - 1) * size;
+
+      const total = await knex(model).count({ count: "id" });
+      const list = await knex(model)
+        .select()
+        .orderBy("id", "desc")
+        .limit(size)
+        .offset(offset);
+
+      const count = Number(total[0].count || total[0]["count(*)"] || 0);
       return {
-        count: count,
-        total: Math.ceil(count / pageSize),
-        current: +cur,
+        count,
+        total: Math.ceil(count / size),
+        current,
         list: list,
       };
     } catch (err) {
@@ -73,34 +58,8 @@ let TrialService ={
   // 查
   async detail(id) {
     try {
-      // 查询试用
-      const data = await knex(model).where("id", "=", id).select();
-
-      //兼容mysql错误
-      if (!data[0] || !data[0].cid) {
-        return false;
-      }
-      // 通过栏目id查找模型id
-      const modId = await knex.raw(
-        `SELECT mid FROM cms_category WHERE id=? LIMIT 0,1`,
-        [data[0].cid]
-      );
-
-      let field = [];
-      if (modId[0].length > 0 && modId[0][0].mid !== "0") {
-        // 通过模型查找表名
-        const tableName = await knex.raw(
-          `SELECT tableName FROM cms_model WHERE id=?`,
-          [modId[0][0].mid]
-        );
-        // 通过表名查找试用
-        field = await knex.raw(
-          `SELECT * FROM ${tableName[0][0].tableName} WHERE aid=? LIMIT 0,1`,
-          [id]
-        );
-      }
-
-      return { ...data[0], field: field.length > 0 ? field[0][0] : {} };
+      const data = await knex(model).where("id", "=", id).first();
+      return data || null;
     } catch (err) {
       console.error(err);
       throw err;
@@ -108,43 +67,30 @@ let TrialService ={
   },
 
   // 搜索
-  async search(key = "", cur = 1, pageSize = 10, cid = 0) {
+  async search(key = "", cur = 1, pageSize = 10) {
     try {
-      // 查询个数
-      let sql;
-      const countSql = `SELECT COUNT(*) as count FROM  cms_trial a LEFT JOIN cms_category c ON a.id=c.id`;
-      const keyStr = ` WHERE a.name LIKE \'%${key}%\'`;
-      const cidStr = `  AND c.id=?`;
+      const current = Math.max(parseInt(cur) || 1, 1);
+      const size = Math.max(parseInt(pageSize) || 10, 1);
+      const offset = (current - 1) * size;
 
-      if (cid === 0) {
-        sql = countSql + keyStr;
-      } else {
-        sql = countSql + keyStr + cidStr;
+      const baseQuery = knex(model);
+      if (key) {
+        baseQuery.where("name", "like", `%${key}%`);
       }
 
-      const total = cid ? await knex.raw(sql, [cid]) : await knex.raw(sql, []);
-      // 翻页
-      const offset = parseInt((cur - 1) * pageSize);
-      let sql_list = "";
-      const listStart = `SELECT * FROM ${model} a LEFT JOIN cms_category c ON a.id=c.id WHERE a.name LIKE  \'%${key}%\' `;
-      const listEnd = `ORDER BY a.id desc LIMIT ${offset},${parseInt(
-        pageSize
-      )}`;
-      if (cid === 0) {
-        sql_list = listStart + listEnd;
-      } else {
-        sql_list = listStart + `AND c.id=? ` + listEnd;
-      }
+      const total = await baseQuery.clone().count({ count: "id" });
+      const list = await baseQuery
+        .clone()
+        .orderBy("id", "desc")
+        .limit(size)
+        .offset(offset);
+      const count = Number(total[0].count || total[0]["count(*)"] || 0);
 
-      const list = cid
-        ? await knex.raw(sql_list, [cid])
-        : await knex.raw(sql_list, []);
-      const count = total[0][0].count;
       return {
-        count: count,
-        total: Math.ceil(count / pageSize),
-        current: +cur,
-        list: list[0],
+        count,
+        total: Math.ceil(count / size),
+        current,
+        list,
       };
     } catch (err) {
       console.error(err);
@@ -167,13 +113,14 @@ let TrialService ={
   },
 
   // 上一篇试用
-  async pre(id, cid) {
+  async pre(id) {
     try {
-      const result = await knex.raw(
-        `SELECT * FROM cms_trial a LEFT JOIN cms_category c ON a.id=c.id  WHERE a.id<? AND a.id=? ORDER BY id DESC LIMIT 1`,
-        [id, cid]
-      );
-      return result[0][0];
+      const result = await knex(model)
+        .select("id", "name")
+        .where("id", "<", id)
+        .orderBy("id", "desc")
+        .first();
+      return result || null;
     } catch (err) {
       console.error(err);
       throw err;
@@ -181,13 +128,14 @@ let TrialService ={
   },
 
   // 下一篇试用
-  async next(id, cid) {
+  async next(id) {
     try {
-      const result = await knex.raw(
-        `SELECT a.id,a.name,c.name,c.path FROM cms_trial a LEFT JOIN cms_category c ON a.id=c.id WHERE a.id>? AND a.id=? LIMIT 1`,
-        [id, cid]
-      );
-      return result[0][0];
+      const result = await knex(model)
+        .select("id", "name")
+        .where("id", ">", id)
+        .orderBy("id", "asc")
+        .first();
+      return result || null;
     } catch (err) {
       console.error(err);
       throw err;
@@ -196,22 +144,9 @@ let TrialService ={
 
   // 通过栏目id获取mid，通过mid获取模型对应字段
   async findField(cid) {
-    try {
-      // 查询个数
-      const mid = `SELECT mid FROM cms_category WHERE id=${cid} AND mid IS NOT NULL`;
-      const _mid = await knex.raw(mid);
-      let res = [];
-      if (_mid[0].length > 0) {
-        const field = `SELECT cname,ename,type,val,defaultVal,orderBy FROM cms_field WHERE mid=${_mid[0][0].mid} LIMIT 0,12`;
-        res = await knex.raw(field);
-      }
-      return {
-        fields: res[0],
-      };
-    } catch (err) {
-      console.error(err);
-      throw err;
-    }
+    return {
+      fields: [],
+    };
   },
 
   async tongji() {
