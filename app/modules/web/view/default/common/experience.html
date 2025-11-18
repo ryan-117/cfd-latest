@@ -169,7 +169,7 @@
             const products = Array.from(form.querySelectorAll('input[name="products"]:checked')).map(i => i.value);
             const payload = {
                 name: (fd.get('name') || '').toString().trim(),
-                phone: (fd.get('phone') || '').toString().trim(),
+                tel: (fd.get('phone') || '').toString().trim(),
                 email: (fd.get('email') || '').toString().trim(),
                 company: (fd.get('company') || '').toString().trim(),
                 province: (fd.get('province') || '').toString().trim(),
@@ -177,13 +177,15 @@
                 scene: (fd.get('scene') || '').toString().trim(),
                 products
             };
-            // 占位接口地址，可按需替换
-            const resp = await fetch('/api/experience/apply', {
+            const resp = await fetch('/cms/trial/create', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
-            if (!resp.ok) throw new Error('网络错误');
+            const result = await resp.json();
+            if (!resp.ok || result.code !== 200) {
+                throw new Error(result?.msg || '提交失败');
+            }
             msg.style.color = '#10B981';
             msg.textContent = '提交成功，我们将尽快与您联系！';
             submitBtn.textContent = '已提交';

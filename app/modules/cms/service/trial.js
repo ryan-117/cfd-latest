@@ -13,6 +13,8 @@ let model = "cms_trial";
 let db = Chan.Service(knex, model);
 const pageSize = 100;
 
+const sanitize = (val = "") => (typeof val === "string" ? val.trim() : "");
+
 async function getImgsByTrialId(id, arr) {
   const imgStr = ` SELECT img,content FROM cms_trial WHERE id=${id}`;
   const img = await knex.raw(imgStr, []);
@@ -27,7 +29,33 @@ async function getImgsByTrialId(id, arr) {
     }
   }
 }
+
 let TrialService ={
+  async create(body = {}) {
+    try {
+      const products = Array.isArray(body.products)
+        ? body.products.filter(Boolean).join(",")
+        : sanitize(body.trial_products);
+
+      const payload = {
+        name: sanitize(body.name),
+        tel: sanitize(body.tel || body.phone),
+        email: sanitize(body.email),
+        company: sanitize(body.company),
+        province: sanitize(body.province),
+        industry: sanitize(body.industry),
+        scene: sanitize(body.scene),
+        trial_products: products,
+      };
+
+      const [id] = await knex(model).insert(payload);
+      return { id, ...payload };
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
+  },
+
   // 试用列表
   async list(cur = 1, pageSize = 10) {
     try {

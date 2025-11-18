@@ -19,16 +19,30 @@ let TrialController = {
   // 增
   async create(req, res, next) {
     try {
-      const body = req.body;
-      body.defaultParams.createdAt = dayjs(body.defaultParams.createdAt).format(
-        "YYYY-MM-DD HH:mm:ss"
-      );
-      body.defaultParams.updatedAt = dayjs(body.defaultParams.updatedAt).format(
-        "YYYY-MM-DD HH:mm:ss"
-      );
-      body.defaultParams.content = filterBody(body.defaultParams.content);
-      const data = await trial.create(body);
-      res.json({ ...success, data: data });
+      const {
+        name = "",
+        tel = "",
+        phone = "",
+        email = "",
+        company = "",
+        province = "",
+        industry = "",
+        scene = "",
+        products = [],
+      } = req.body || {};
+
+      const data = await trial.create({
+        name,
+        tel,
+        phone,
+        email,
+        company,
+        province,
+        industry,
+        scene,
+        products,
+      });
+      res.json({ ...success, data });
     } catch (err) {
       next(err);
     }

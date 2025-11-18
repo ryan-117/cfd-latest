@@ -46,6 +46,7 @@ export default (app, router, config) => {
   router.get("/trial/tongji", controller.trial.tongji);
   router.get("/trial/search", controller.trial.search);
   router.get("/trial/detail", controller.trial.detail);
+  router.post("/trial/create", controller.trial.create);
   router.get("/trial/findField", auth(), controller.trial.findField);
 
   //上传
